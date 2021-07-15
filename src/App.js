@@ -36,7 +36,7 @@ import pen3 from './Assets/images/codepen3.png';
 import pen4 from './Assets/images/codepen4.png';
 
 import {FaTrafficLight, FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterest, FaGithub, FaCodepen} from 'react-icons/fa';
-import {BsSearch, BsGearFill} from 'react-icons/bs';
+import {BsSearch} from 'react-icons/bs';
 import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiSass, SiBootstrap, SiReact, SiWordpress, SiJava, SiMicrosoftsqlserver, SiMysql, SiFigma, SiGmail } from 'react-icons/si';
 import {FiMenu, FiSun, FiMoon} from 'react-icons/fi';
 import {AiOutlineSetting} from 'react-icons/ai';
@@ -84,9 +84,9 @@ function App() {
                 I want to be a front-end developer / ui developer / client side developer because this path combines between programming and more creativity on ui features such as color-schemes and wireframing, 
                 and I have built a lot of projects that have increased my experience, I am a fast learner and always love to develop myself 
               </p>
-              <Button href='https://www.linkedin.com/in/ahmed-zakaria-a554a4183'><FaLinkedinIn/></Button>
-              <Button href='https://github.com/AhmedZkaria22'><FaGithub/></Button>
-              <Button variant="primary" href='https://drive.google.com/file/d/12zu2cj6q9v7g2JsVND-x5OHDtgq11P4q/view?usp=sharing'>Resume</Button>
+              <Button href='https://www.linkedin.com/in/ahmed-zakaria-a554a4183' target='_blank'><FaLinkedinIn/></Button>
+              <Button href='https://github.com/AhmedZkaria22' target='_blank'><FaGithub/></Button>
+              <Button variant="primary" href='https://drive.google.com/file/d/1btPGWK-oxiPDeBMSkCNt-c9ZBoFvrIop/view?usp=sharing' target='_blank'>Resume</Button>
             </div>
           </Col>
 
@@ -114,9 +114,8 @@ function App() {
 
         <h2>  Knowlage </h2>
         <div className={'skills__container'}>
-          <Skill SkillIcon={FaTrafficLight} SkillName='Ui, Ux'/>
+          <Skill SkillIcon={FaTrafficLight} SkillName='Ui Ux'/>
           <Skill SkillIcon={BsSearch} SkillName='Seo'/>
-          {/* <Skill SkillIcon={GiInspiration} SkillName='Inspiration'/> */}
           <Skill SkillIcon={SiJava} SkillName='Java'/>
           <Skill SkillIcon={SiMicrosoftsqlserver} SkillName='Sql'/>
           <Skill SkillIcon={SiMysql} SkillName='MySQL'/>
@@ -189,13 +188,13 @@ function App() {
       <footer className={'text-center'}>
         <h3> Ahmed Zakaria </h3>
         <div className={'footer__socialWrapper'}>
-          <a href='https://www.facebook.com/profile.php?id=100009428856148' target='_blank'><FaFacebookF /></a>
-          <a href='https://twitter.com/AhmedZkaria15' target='_blank'><FaTwitter /></a>
-          <a href='https://www.linkedin.com/in/ahmed-zakaria-a554a4183' target='_blank'><FaLinkedinIn /></a>                
-          <a href='https://github.com/AhmedZkaria22' target='_blank'><FaGithub /></a>
-          <a href='https://codepen.io/ahmedzkaria22' target='_blank'><FaCodepen /></a>
-          <a href='https://www.pinterest.com/zikoser/_saved/' target='_blank'><FaPinterest /></a>
-          <a href='https://ahmedzkaria372017@gmail.com' target='_blank'><SiGmail /></a>
+          <a href='https://www.facebook.com/profile.php?id=100009428856148' target='_blank' rel="noreferrer"><FaFacebookF /></a>
+          <a href='https://twitter.com/AhmedZkaria15' target='_blank' rel="noreferrer"><FaTwitter /></a>
+          <a href='https://www.linkedin.com/in/ahmed-zakaria-a554a4183' target='_blank' rel="noreferrer"><FaLinkedinIn /></a>                
+          <a href='https://github.com/AhmedZkaria22' target='_blank' rel="noreferrer"><FaGithub /></a>
+          <a href='https://codepen.io/ahmedzkaria22' target='_blank' rel="noreferrer"><FaCodepen /></a>
+          <a href='https://www.pinterest.com/zikoser/_saved/' target='_blank' rel="noreferrer"><FaPinterest /></a>
+          <a href='https://ahmedzkaria372017@gmail.com' target='_blank' rel="noreferrer"><SiGmail /></a>
         </div>
         <p>© 2021 copyright all right reserved</p>
         <p>made with <span>♥</span> </p>

@@ -9,7 +9,7 @@ function Project(props) {
             style={ (preload[4]) && {marginBottom: '11rem'}  }
         >
             <div className={'projects__wrapper__item__imgWrapper'}>
-                <img src={`${preload[1]}`} />  
+                <img src={`${preload[1]}`} alt={`${preload[1]}`} />  
             </div>
             <h5>{
                 (preload[4]) ? 
