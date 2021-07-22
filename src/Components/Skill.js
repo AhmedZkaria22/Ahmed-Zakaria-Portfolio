@@ -6,7 +6,7 @@ function Skill(props) {
     const spanRef = useRef(null);
 
     return (
-        <div className={'skills__container__item'}
+        <div className={'skills__container__item'}            
             onMouseEnter={() => {
                 spanRef.current.style.animation = "none";
                 spanRef.current.style.animation = "skillsItemBefore 0.6s linear";        

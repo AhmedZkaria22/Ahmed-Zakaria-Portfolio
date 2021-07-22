@@ -1,6 +1,8 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'aos/dist/aos.css'
 import './Styles/Portfolio.css';
+import Aos from 'aos';
 import { Container, Row, Col, Button, Carousel, Form } from 'react-bootstrap';
 
 import Ahmed from './Assets/images/Ahmed.png';
@@ -46,8 +48,12 @@ import Skill from './Components/Skill';
 import Project from './Components/Project';
 import Pen from './Components/Pen';
 import { menuFun, filterFun, projectsFun, colorMoodFun } from './Plugin';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(() => {
+    Aos.init({});
+  }, []);
   const certificatesImages = [ IFiti, IHtml, ICss, IResponsive, IJs, IJquery, IReact, IWordpress, ISql, IJava ];
   const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Firebase', 'Wordpress'];
   return (
@@ -73,8 +79,10 @@ function App() {
 
       <Container id="hero">
         <Row>
-        <Col lg={7} md={7} sm={12}>
-            <div className={'hero__description'}>
+        <Col lg={7} md={7} sm={12} 
+          // data-aos='slide-right' data-aos-delay='50' data-aos-duration='1000'>
+          data-aos='fade-down' data-aos-delay='50' data-aos-duration='1000'>
+            <div className={'hero__description'}>              
               <h3>Hello, <br/>I am Ahmed Zakaria</h3>
               <p> Front end developer </p>
               <div className={'hero__photo__small'}>
@@ -84,13 +92,20 @@ function App() {
                 I want to be a front-end developer / ui developer / client side developer because this path combines between programming and more creativity on ui features such as color-schemes and wireframing, 
                 and I have built a lot of projects that have increased my experience, I am a fast learner and always love to develop myself 
               </p>
-              <Button href='https://www.linkedin.com/in/ahmed-zakaria-a554a4183' target='_blank'><FaLinkedinIn/></Button>
-              <Button href='https://github.com/AhmedZkaria22' target='_blank'><FaGithub/></Button>
-              <Button variant="primary" href='https://drive.google.com/file/d/1btPGWK-oxiPDeBMSkCNt-c9ZBoFvrIop/view?usp=sharing' target='_blank'>Resume</Button>
+              <Button href='https://www.linkedin.com/in/ahmed-zakaria-a554a4183' target='_blank'
+                data-aos='fade-down' data-aos-delay='800' data-aos-duration='900'
+              ><FaLinkedinIn/></Button>
+              <Button href='https://github.com/AhmedZkaria22' target='_blank'
+                data-aos='fade-down' data-aos-delay='900' data-aos-duration='1000'
+              ><FaGithub/></Button>
+              <Button variant="primary" href='https://drive.google.com/file/d/1btPGWK-oxiPDeBMSkCNt-c9ZBoFvrIop/view?usp=sharing' target='_blank'
+                data-aos='fade-down' data-aos-delay='1000' data-aos-duration='1100' 
+              >Resume</Button>
             </div>
           </Col>
 
-          <Col lg={5} md={5} sm={8}>
+          <Col lg={5} md={5} sm={8}
+            data-aos='zoom-in' data-aos-delay='500' data-aos-duration='1100'>
             <div className={'hero__photo'}>
               <img src={Ahmed}  alt='img'/>
             </div>
@@ -99,8 +114,9 @@ function App() {
       </Container>
 
       <section id="skills">        
-        <h2>  SKILLS / </h2>
-        <div className={'skills__container'}>
+        <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  SKILLS / </h2>
+        <div className={'skills__container'}
+         data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
           <Skill SkillIcon={SiHtml5} SkillName='Html / Html5'/>
           <Skill SkillIcon={SiCss3} SkillName='Css / Css3'/>
           <Skill SkillIcon={SiJavascript} SkillName='Js : basic, dom, bom, oop'/>
@@ -112,8 +128,9 @@ function App() {
           <Skill SkillIcon={SiWordpress} SkillName='Wordpress'/>
         </div>
 
-        <h2>  Knowlage </h2>
-        <div className={'skills__container'}>
+        <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  Knowlage </h2>
+        <div className={'skills__container'}
+          data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
           <Skill SkillIcon={FaTrafficLight} SkillName='Ui Ux'/>
           <Skill SkillIcon={BsSearch} SkillName='Seo'/>
           <Skill SkillIcon={SiJava} SkillName='Java'/>
@@ -121,14 +138,15 @@ function App() {
           <Skill SkillIcon={SiMysql} SkillName='MySQL'/>
         </div>
 
-        <h2>FAMILIAR</h2>
-        <div className={'skills__container'}>
+        <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>FAMILIAR</h2>
+        <div className={'skills__container'}
+          data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
           <Skill SkillIcon={SiFigma} SkillName='Figma'/>
         </div>        
       </section>
 
       <section id="projects">
-        <h2> projects / </h2>    
+      <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> projects / </h2>    
         <AiOutlineSetting className={'projects__filter'}  onClick={filterFun}/>    
         <div className={'projects__filtersWrapper'}>    
           {
@@ -141,7 +159,9 @@ function App() {
             })
           }
         </div>
-        <div className={'projects__wrapper'}>
+        
+        <div className={'projects__wrapper'}
+          data-aos='slide-up' data-aos-delay='400' data-aos-duration='1200' data-aos-easing="linear">
             <Project preload={['Lumia Theme', PLumia, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Lumia-Theme/Lumia.html']}/>
             <Project preload={['Vesperr Theme', PVesperr, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Vesperr-Theme/Vesperr.html']}/>
             <Project preload={['Portfolio-card Theme', PPortfolioCard, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Portofolio-Theme/Portfolio.html']}/>
@@ -160,8 +180,9 @@ function App() {
       </section>
 
       <section id="certificates">      
-        <h2> certificates / </h2>        
-        <Carousel interval={2000} className={"certificates__carousel"}>
+      <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> certificates / </h2>        
+        <Carousel interval={2000} className={"certificates__carousel"}
+          data-aos='zoom-in-up' data-aos-delay='700' data-aos-duration='1300'>
           {
             certificatesImages.map( (certImg, index) => {
               return(
@@ -175,9 +196,10 @@ function App() {
       </section>
 
       <section id="pens">
-        <h2> codepen pens / </h2>
-        <p className={'text-muted'}> some of pens you can see more in profile </p>
-        <div className={'pens__wrapper'}>
+      <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> codepen pens / </h2>
+        <p className={'text-muted'} data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>
+          some of pens you can see more in profile </p>
+        <div className={'pens__wrapper'}  data-aos='slide-up' data-aos-delay='600' data-aos-duration='1200'>
           <Pen preload={[pen1, 'Hijri calendar clock', 'https://codepen.io/ahmedzkaria22/pen/GRjpQpN']}/>
           <Pen preload={[pen2, 'Facts counter number using setInterval', 'https://codepen.io/ahmedzkaria22/pen/vYXLmdX']}/>
           <Pen preload={[pen3, 'polygons using border-radius , clip-path-polygon', 'https://codepen.io/ahmedzkaria22/pen/poEJNvQ']}/>
