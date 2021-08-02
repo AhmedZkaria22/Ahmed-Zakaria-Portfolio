@@ -3,10 +3,11 @@ import { Figure, NavLink } from 'react-bootstrap';
 import {RiErrorWarningFill} from 'react-icons/ri';
 function Project(props) {
     const {preload} = props;
+
     return (
         <Figure className={`projects__wrapper__item ${preload[2].toString().replace(/,/g, " ")}`}
             as={NavLink} href={preload[3]}  target='_blank'
-            style={ (preload[4]) && {marginBottom: '11rem'}  }
+            style={ (preload[4]) && {marginBottom: '11rem'}  }            
         >
             <div className={'projects__wrapper__item__imgWrapper'}>
                 <img src={`${preload[1]}`} alt={`${preload[1]}`} />  

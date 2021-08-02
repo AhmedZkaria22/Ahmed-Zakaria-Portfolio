@@ -31,6 +31,7 @@ import PTodo from './Assets/images/projects/Todo.jpeg';
 import PWpPort from './Assets/images/projects/WordPressPortfolio.png';
 import PWpDes from './Assets/images/projects/DesignAgency.png';
 import PWpDoc from './Assets/images/projects/DoctorOffice.png';
+import PAbdoSt from './Assets/images/projects/AbdoStore.png';
 
 import pen1 from './Assets/images/codepen1.png';
 import pen2 from './Assets/images/codepen2.png';
@@ -160,8 +161,8 @@ function App() {
           }
         </div>
         
-        <div className={'projects__wrapper'}
-          data-aos='slide-up' data-aos-delay='400' data-aos-duration='1200' data-aos-easing="linear">
+        <div className={'projects__wrapper'}>
+          {/* data-aos='slide-up' data-aos-delay='400' data-aos-duration='1200' data-aos-easing="linear"> */}
             <Project preload={['Lumia Theme', PLumia, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Lumia-Theme/Lumia.html']}/>
             <Project preload={['Vesperr Theme', PVesperr, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Vesperr-Theme/Vesperr.html']}/>
             <Project preload={['Portfolio-card Theme', PPortfolioCard, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Portofolio-Theme/Portfolio.html']}/>
@@ -176,13 +177,15 @@ function App() {
             <Project preload={['Pyramid Glass Clone', PPyramid, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Pyramid-Glass/Glassware.html']}/>
             <Project preload={['React Todo List', PTodo, ['Html', 'Css', 'Scss', 'Responsive', 'Js', 'React'], 'https://ahmedzkaria22.github.io/React-TodoList-2/']}/>
             <Project preload={['Budget Tracker , Photo Grid , Authentication', PBudget, ['Html', 'Css', 'Responsive', 'Js', 'React', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Firebase/']}/>
+            <Project preload={['Abdo Store', PAbdoSt, ['Html', 'Css', 'Responsive', 'Js', 'React', 'Firebase'], 'https://ahmedzkaria22.github.io/React-ECommerce/']}/>
         </div>
       </section>
 
-      <section id="certificates">      
-      <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> certificates / </h2>        
-        <Carousel interval={2000} className={"certificates__carousel"}
-          data-aos='zoom-in-up' data-aos-delay='700' data-aos-duration='1300'>
+      <section id="certificates">     
+      {/* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> certificates / </h2>         */}
+      <h2> certificates / </h2>
+        <Carousel interval={2000} className={"certificates__carousel"}>
+            {/* data-aos='zoom-in' data-aos-delay='100' data-aos-duration='800'>  */}
           {
             certificatesImages.map( (certImg, index) => {
               return(
@@ -196,10 +199,13 @@ function App() {
       </section>
 
       <section id="pens">
-      <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> codepen pens / </h2>
-        <p className={'text-muted'} data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>
+      {/* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> codepen pens / </h2>
+        <p className={'text-muted'} data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> */}
+        <h2> codepen pens / </h2>
+        <p>
           some of pens you can see more in profile </p>
-        <div className={'pens__wrapper'}  data-aos='slide-up' data-aos-delay='600' data-aos-duration='1200'>
+        <div className={'pens__wrapper'}>  
+        {/* data-aos='slide-up' data-aos-delay='600' data-aos-duration='1200'> */}
           <Pen preload={[pen1, 'Hijri calendar clock', 'https://codepen.io/ahmedzkaria22/pen/GRjpQpN']}/>
           <Pen preload={[pen2, 'Facts counter number using setInterval', 'https://codepen.io/ahmedzkaria22/pen/vYXLmdX']}/>
           <Pen preload={[pen3, 'polygons using border-radius , clip-path-polygon', 'https://codepen.io/ahmedzkaria22/pen/poEJNvQ']}/>
