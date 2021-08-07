@@ -32,6 +32,7 @@ import PWpPort from './Assets/images/projects/WordPressPortfolio.png';
 import PWpDes from './Assets/images/projects/DesignAgency.png';
 import PWpDoc from './Assets/images/projects/DoctorOffice.png';
 import PAbdoSt from './Assets/images/projects/AbdoStore.png';
+import PChat from './Assets/images/projects/Chat.png';
 
 import pen1 from './Assets/images/codepen1.png';
 import pen2 from './Assets/images/codepen2.png';
@@ -178,6 +179,7 @@ function App() {
             <Project preload={['React Todo List', PTodo, ['Html', 'Css', 'Scss', 'Responsive', 'Js', 'React'], 'https://ahmedzkaria22.github.io/React-TodoList-2/']}/>
             <Project preload={['Budget Tracker , Photo Grid , Authentication', PBudget, ['Html', 'Css', 'Responsive', 'Js', 'React', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Firebase/']}/>
             <Project preload={['Abdo Store', PAbdoSt, ['Html', 'Css', 'Responsive', 'Js', 'React', 'Firebase'], 'https://ahmedzkaria22.github.io/React-ECommerce/']}/>
+            <Project preload={['React Chat', PChat, ['Html', 'Css', 'Scss', 'Responsive', 'Js', 'React', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Chat/']}/>
         </div>
       </section>
 
