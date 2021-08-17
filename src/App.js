@@ -31,6 +31,11 @@ import PTodo from './Assets/images/projects/Todo.jpeg';
 import PWpPort from './Assets/images/projects/WordPressPortfolio.png';
 import PWpDes from './Assets/images/projects/DesignAgency.png';
 import PWpDoc from './Assets/images/projects/DoctorOffice.png';
+import PWpBotq from './Assets/images/projects/Boutique.png';
+import PWpYgLnd from './Assets/images/projects/YogaLanding.png';
+import PWpFada from './Assets/images/projects/Fada.png';
+import PWpRlRst from './Assets/images/projects/RoyalRestaurant.png';
+
 import PAbdoSt from './Assets/images/projects/AbdoStore.png';
 import PChat from './Assets/images/projects/Chat.png';
 
@@ -116,7 +121,8 @@ function App() {
       </Container>
 
       <section id="skills">        
-        <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  SKILLS / </h2>
+        {/* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  SKILLS / </h2> */}
+        <h2>  SKILLS / </h2>
         <div className={'skills__container'}
          data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
           <Skill SkillIcon={SiHtml5} SkillName='Html / Html5'/>
@@ -148,7 +154,8 @@ function App() {
       </section>
 
       <section id="projects">
-      <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> projects / </h2>    
+      {/* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> projects / </h2>     */}
+      <h2> projects / </h2>
         <AiOutlineSetting className={'projects__filter'}  onClick={filterFun}/>    
         <div className={'projects__filtersWrapper'}>    
           {
@@ -169,8 +176,13 @@ function App() {
             <Project preload={['Portfolio-card Theme', PPortfolioCard, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Portofolio-Theme/Portfolio.html']}/>
             <Project preload={['EliteCrop Theme', PEliteCrop, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/EliteCrop/EliteCrop.html']}/>
             <Project preload={['Wordpress Portfolio', PWpPort, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/?fbclid=IwAR3WqAQda5_q1iRLcTEy364YWLUliM7v994GIHS_9TDoqTdNjwObG2N_ckY']}/>
-            <Project preload={['Design Agency', PWpDes, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/do-landing/' , 'code']}/>
-            <Project preload={['Doctor’s Office', PWpDoc, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/design-agency-landing-page/' , 'code']}/>
+            {/* <Project preload={['Design Agency', PWpDes, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/design-agency-landing-page/' , 'code']}/> */}
+            <Project preload={['Design Agency', PWpDes, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/design-agency-landing-page/']}/>
+            <Project preload={['Doctor’s Office', PWpDoc, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/do-landing/']}/>
+            <Project preload={['Boutique Ar-En', PWpBotq, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/boutique-landing/']}/>
+            <Project preload={['Fada Clone', PWpFada, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/fada-home/']}/>
+            <Project preload={['Yoga Landing', PWpYgLnd, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/yoga-landing/']}/>
+            <Project preload={['Royal Returant', PWpRlRst, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/royal-restaurant/']}/>
             <Project preload={['Personal Theme', PPersonal, ['Html', 'Css'], 'https://ahmedzkaria22.github.io/Personal/Index.html']}/>
             <Project preload={['Trafalgar Theme', PTrafalgar, ['Html', 'Css', 'Scss'], 'https://ahmedzkaria22.github.io/Trafalgar/Index.html']}/>
             <Project preload={['Mogo Theme', PMogo, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/Mogo/Index.html']}/>

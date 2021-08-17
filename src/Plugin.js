@@ -105,3 +105,4 @@ export  const colorMoodFun = (e) => {
         document.documentElement.style.setProperty("--footerPolygon", "polygon(0% 0%, 0% 100%, 100% 100%)");
     }
 }
+

@@ -102,6 +102,30 @@ body *:not(img, i) {
             transform: rotate(360deg);
   }
 }
+@-webkit-keyframes sectionHead {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -100px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+}
+@keyframes sectionHead {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -100px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+}
 #root {
   background-color: var(--backwallperColor);
 }
@@ -332,6 +356,10 @@ header .header__menu a {
 
 #skills, #projects, #certificates, #pens {
   margin: 7rem auto 3rem;
+}
+#skills > h2, #projects > h2, #certificates > h2, #pens > h2 {
+  -webkit-animation: sectionHead 0.8s ease 0.1s;
+          animation: sectionHead 0.8s ease 0.1s;
 }
 
 #skills {
