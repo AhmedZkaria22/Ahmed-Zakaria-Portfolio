@@ -249,10 +249,12 @@ header{
             background-color: transparent;
             border: none;
             margin-inline: 0.5rem;
+            &:focus{ border: none;  outline: none; box-shadow: none; }
             &:last-of-type{ color: var(--textColor); }                
             svg{
                 font-size: 2rem;
                 color: var(--textColor);
+                &:focus{ border: none;  outline: none; box-shadow: none; }
             }
         }
     }

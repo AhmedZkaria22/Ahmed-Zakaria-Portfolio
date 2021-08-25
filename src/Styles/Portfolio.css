@@ -346,12 +346,24 @@ header .header__menu a {
   border: none;
   margin-inline: 0.5rem;
 }
+#hero .hero__description a:focus {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 #hero .hero__description a:last-of-type {
   color: var(--textColor);
 }
 #hero .hero__description a svg {
   font-size: 2rem;
   color: var(--textColor);
+}
+#hero .hero__description a svg:focus {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #skills, #projects, #certificates, #pens {

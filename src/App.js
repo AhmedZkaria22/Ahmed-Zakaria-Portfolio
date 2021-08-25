@@ -38,6 +38,7 @@ import PWpRlRst from './Assets/images/projects/RoyalRestaurant.png';
 
 import PAbdoSt from './Assets/images/projects/AbdoStore.png';
 import PChat from './Assets/images/projects/Chat.png';
+import PBall from './Assets/images/projects/BallSort.png';
 
 import pen1 from './Assets/images/codepen1.png';
 import pen2 from './Assets/images/codepen2.png';
@@ -46,9 +47,10 @@ import pen4 from './Assets/images/codepen4.png';
 
 import {FaTrafficLight, FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterest, FaGithub, FaCodepen} from 'react-icons/fa';
 import {BsSearch} from 'react-icons/bs';
-import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiSass, SiBootstrap, SiReact, SiWordpress, SiJava, SiMicrosoftsqlserver, SiMysql, SiFigma, SiGmail } from 'react-icons/si';
+import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiSass, SiBootstrap, SiReact, SiWordpress, SiJava, SiMicrosoftsqlserver, SiMysql, SiFigma, SiGmail, SiFirebase } from 'react-icons/si';
 import {FiMenu, FiSun, FiMoon} from 'react-icons/fi';
 import {AiOutlineSetting} from 'react-icons/ai';
+import {GiFamilyTree} from 'react-icons/gi';
 
 
 import Skill from './Components/Skill';
@@ -62,7 +64,7 @@ function App() {
     Aos.init({});
   }, []);
   const certificatesImages = [ IFiti, IHtml, ICss, IResponsive, IJs, IJquery, IReact, IWordpress, ISql, IJava ];
-  const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Firebase', 'Wordpress'];
+  const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Redux', 'DsAlgo', 'Firebase', 'Wordpress'];
   return (
     <>
       <header>
@@ -105,7 +107,7 @@ function App() {
               <Button href='https://github.com/AhmedZkaria22' target='_blank'
                 data-aos='fade-down' data-aos-delay='900' data-aos-duration='1000'
               ><FaGithub/></Button>
-              <Button variant="primary" href='https://drive.google.com/file/d/1btPGWK-oxiPDeBMSkCNt-c9ZBoFvrIop/view?usp=sharing' target='_blank'
+              <Button variant="primary" href='https://drive.google.com/file/d/107GRHhCyB3EPz-qSPMMEIWRAFMNFbgR3/view?usp=sharing' target='_blank'
                 data-aos='fade-down' data-aos-delay='1000' data-aos-duration='1100' 
               >Resume</Button>
             </div>
@@ -132,7 +134,7 @@ function App() {
           <Skill SkillIcon={SiSass} SkillName='Sass / Scss'/>
           <Skill SkillIcon={SiBootstrap} SkillName='Bootstrap'/>
           <Skill SkillIcon={SiJavascript} SkillName='Ecma'/>
-          <Skill SkillIcon={SiReact} SkillName='React'/>
+          <Skill SkillIcon={SiReact} SkillName={`React & Redux`}/>
           <Skill SkillIcon={SiWordpress} SkillName='Wordpress'/>
         </div>
 
@@ -141,9 +143,11 @@ function App() {
           data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
           <Skill SkillIcon={FaTrafficLight} SkillName='Ui Ux'/>
           <Skill SkillIcon={BsSearch} SkillName='Seo'/>
+          <Skill SkillIcon={GiFamilyTree} SkillName={`Data Structure & Algorithm`}/>          
           <Skill SkillIcon={SiJava} SkillName='Java'/>
           <Skill SkillIcon={SiMicrosoftsqlserver} SkillName='Sql'/>
           <Skill SkillIcon={SiMysql} SkillName='MySQL'/>
+          <Skill SkillIcon={SiFirebase} SkillName='FireBase'/>
         </div>
 
         <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>FAMILIAR</h2>
@@ -188,10 +192,11 @@ function App() {
             <Project preload={['Mogo Theme', PMogo, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/Mogo/Index.html']}/>
             <Project preload={['ColorLip-app Theme', PColorLip, ['Html', 'Css', 'Scss', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/ColorLip/Index.html']}/>            
             <Project preload={['Pyramid Glass Clone', PPyramid, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Pyramid-Glass/Glassware.html']}/>
-            <Project preload={['React Todo List', PTodo, ['Html', 'Css', 'Scss', 'Responsive', 'Js', 'React'], 'https://ahmedzkaria22.github.io/React-TodoList-2/']}/>
-            <Project preload={['Budget Tracker , Photo Grid , Authentication', PBudget, ['Html', 'Css', 'Responsive', 'Js', 'React', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Firebase/']}/>
-            <Project preload={['Abdo Store', PAbdoSt, ['Html', 'Css', 'Responsive', 'Js', 'React', 'Firebase'], 'https://ahmedzkaria22.github.io/React-ECommerce/']}/>
-            <Project preload={['React Chat', PChat, ['Html', 'Css', 'Scss', 'Responsive', 'Js', 'React', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Chat/']}/>
+            <Project preload={['React Todo List', PTodo, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx'], 'https://ahmedzkaria22.github.io/React-TodoList-2/']}/>
+            <Project preload={['Budget Tracker , Photo Grid , Authentication', PBudget, ['Css', 'Responsive', 'Js', 'React', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Firebase/']}/>
+            <Project preload={['Abdo Store', PAbdoSt, ['Css', 'Responsive', 'Js', 'React', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-ECommerce/']}/>
+            <Project preload={['React Chat', PChat, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Chat/']}/>
+            <Project preload={['Ball Sort ', PBall, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Redux', 'DsAlgo'], 'https://ahmedzkaria22.github.io/Ball-Sort/']}/>
         </div>
       </section>
 
