@@ -39,6 +39,7 @@ import PWpRlRst from './Assets/images/projects/RoyalRestaurant.png';
 import PAbdoSt from './Assets/images/projects/AbdoStore.png';
 import PChat from './Assets/images/projects/Chat.png';
 import PBall from './Assets/images/projects/BallSort.png';
+import PWeather from './Assets/images/projects/WeatherApp.png';
 
 import pen1 from './Assets/images/codepen1.png';
 import pen2 from './Assets/images/codepen2.png';
@@ -64,7 +65,7 @@ function App() {
     Aos.init({});
   }, []);
   const certificatesImages = [ IFiti, IHtml, ICss, IResponsive, IJs, IJquery, IReact, IWordpress, ISql, IJava ];
-  const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Redux', 'DsAlgo', 'Firebase', 'Wordpress'];
+  const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Redux', 'Route', 'DsAlgo', 'Api', 'Firebase', 'Wordpress'];
   return (
     <>
       <header>
@@ -134,7 +135,7 @@ function App() {
           <Skill SkillIcon={SiSass} SkillName='Sass / Scss'/>
           <Skill SkillIcon={SiBootstrap} SkillName='Bootstrap'/>
           <Skill SkillIcon={SiJavascript} SkillName='Ecma'/>
-          <Skill SkillIcon={SiReact} SkillName={`React & Redux`}/>
+          <Skill SkillIcon={SiReact} SkillName={`React & Redux & Route`}/>
           <Skill SkillIcon={SiWordpress} SkillName='Wordpress'/>
         </div>
 
@@ -193,10 +194,11 @@ function App() {
             <Project preload={['ColorLip-app Theme', PColorLip, ['Html', 'Css', 'Scss', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/ColorLip/Index.html']}/>            
             <Project preload={['Pyramid Glass Clone', PPyramid, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Pyramid-Glass/Glassware.html']}/>
             <Project preload={['React Todo List', PTodo, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx'], 'https://ahmedzkaria22.github.io/React-TodoList-2/']}/>
-            <Project preload={['Budget Tracker , Photo Grid , Authentication', PBudget, ['Css', 'Responsive', 'Js', 'React', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Firebase/']}/>
-            <Project preload={['Abdo Store', PAbdoSt, ['Css', 'Responsive', 'Js', 'React', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-ECommerce/']}/>
+            <Project preload={['Budget Tracker , Photo Grid , Authentication', PBudget, ['Css', 'Responsive', 'Js', 'React', 'Route', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Firebase/']}/>
+            <Project preload={['Abdo Store', PAbdoSt, ['Css', 'Responsive', 'Js', 'React', 'Route', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-ECommerce/']}/>
             <Project preload={['React Chat', PChat, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Chat/']}/>
             <Project preload={['Ball Sort ', PBall, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Redux', 'DsAlgo'], 'https://ahmedzkaria22.github.io/Ball-Sort/']}/>
+            <Project preload={['Weather App ', PWeather, ['Css', 'Scss', 'Js', 'React', 'Route', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/Weather-App/#/ReactWeatherHome']}/>
         </div>
       </section>
 
