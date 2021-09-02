@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 let menuFunSensor = true;  
 export const menuFun = () => {
@@ -24,17 +25,11 @@ export const filterFun = () => {
 }
 
 
-let arr = [];
-// const [handelLoopStr, setHandelLoopStr] = useState('');
-// export const handelLoop = (String1, String2) => {
-//     setHandelLoopStr(String1);
-//     for(var i = 0; i<document.querySelectorAll(handelLoopStr).length; i++){
-//         document.querySelectorAll(handelLoopStr)[i].style.display = String2
-//     }     
-// }
-export  const projectsFun = (e) => {
+// let arr = [];
+/*export  const projectsFun = (e) => {
     if (e.target.checked) {        
       arr.push(e.target.nextSibling.textContent);
+      // if(filterArr.indexOf(e.target.nextSibling.textContent) === -1){ filterArr = [ ...filterArr, e.target.nextSibling.textContent ]; }
       for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item').length; i++){
         document.querySelectorAll('.projects__wrapper__item')[i].style.display = 'none'
       }           
@@ -53,11 +48,14 @@ export  const projectsFun = (e) => {
           document.querySelectorAll('.projects__wrapper__item')[i].style.display = 'block'
         } 
       } 
-      console.log(arr);
+      // console.log(arr, filterArr, document.querySelectorAll(`.projects__wrapper__item.${filterArr.join(".")}`));
 
     } else{
 
       arr.splice( arr.indexOf(e.target.nextSibling.textContent) ,1);
+      // if(filterArr.indexOf(e.target.nextSibling.textContent) !== -1){ filterArr = filterArr.filter( item => {
+      //   return item !== e.target.nextSibling.textContent
+      // }); }
       for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item').length; i++){
         document.querySelectorAll('.projects__wrapper__item')[i].style.display = 'none'
       }            
@@ -74,10 +72,44 @@ export  const projectsFun = (e) => {
           document.querySelectorAll('.projects__wrapper__item')[i].style.display = 'block'
         } 
       } 
-      console.log(arr);        
+      // console.log(arr, filterArr, document.querySelectorAll(`.projects__wrapper__item.${filterArr.join(".")}`));
     }
     console.log( e.target.getAttribute("checked") , e.target.checked );
+}*/
+
+let filterArr = [];
+export const handelProjectsFilter = (e) => {
+    if (e.target.checked) {        
+      if(filterArr.indexOf(e.target.nextSibling.textContent) === -1){ filterArr.push(e.target.nextSibling.textContent); }
+    } 
+
+    const allFilters = document.querySelectorAll('.projects__filtersWrapper .form-check');
+    for( let i=0; i<allFilters.length; i++ ){
+      if( allFilters[i].firstChild.checked === false && filterArr.indexOf( allFilters[i].lastChild.textContent ) !== -1){
+          filterArr.splice( filterArr.indexOf( allFilters[i].lastChild.textContent ) , 1);
+      }  
+    }
+
+
+    if(filterArr.length >= 1){
+      console.log(filterArr, document.querySelectorAll(`.projects__wrapper__item.${filterArr.join(".")}`));
+      const allProjects = document.querySelectorAll(`.projects__wrapper__item`);
+      for( let i=0; i<allProjects.length; i++ ){
+        allProjects[i].style.display = 'none';
+      }
+      const allProjectsTargeted = document.querySelectorAll(`.projects__wrapper__item.${filterArr.join(".")}`);
+      for( let i=0; i<allProjectsTargeted.length; i++ ){
+        allProjectsTargeted[i].style.display = 'block';
+      }
+    }else{ 
+      console.log(filterArr, document.querySelectorAll(`.projects__wrapper__item`)); 
+      const allProjects = document.querySelectorAll(`.projects__wrapper__item`);
+      for( let i=0; i<allProjects.length; i++ ){
+        allProjects[i].style.display = 'block';
+      }
+    }          
 }
+
 
 export  const colorMoodFun = (e) => {
     if( e.target === document.querySelector('.header__colorMoodWrapper__sun') ){      
@@ -105,4 +137,3 @@ export  const colorMoodFun = (e) => {
         document.documentElement.style.setProperty("--footerPolygon", "polygon(0% 0%, 0% 100%, 100% 100%)");
     }
 }
-

@@ -57,7 +57,7 @@ import {GiFamilyTree} from 'react-icons/gi';
 import Skill from './Components/Skill';
 import Project from './Components/Project';
 import Pen from './Components/Pen';
-import { menuFun, filterFun, projectsFun, colorMoodFun } from './Plugin';
+import { menuFun, filterFun, colorMoodFun, handelProjectsFilter } from './Plugin';
 import { useEffect } from 'react';
 
 function App() {
@@ -66,6 +66,7 @@ function App() {
   }, []);
   const certificatesImages = [ IFiti, IHtml, ICss, IResponsive, IJs, IJquery, IReact, IWordpress, ISql, IJava ];
   const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Redux', 'Route', 'DsAlgo', 'Api', 'Firebase', 'Wordpress'];
+    
   return (
     <>
       <header>
@@ -167,7 +168,7 @@ function App() {
             projectsLabel.map( (projLabel, index) => {
               return(
                 <Form.Group controlId={`formBasicCheckbox${index+1}`} key={index}>
-                  <Form.Check type="checkbox" label={projLabel} onClick={projectsFun}/>
+                  <Form.Check type="checkbox" label={projLabel} onClick={ handelProjectsFilter }/>
                 </Form.Group>
               );
             })
