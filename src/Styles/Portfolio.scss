@@ -367,9 +367,12 @@ header{
     .projects__wrapper{
         width: 100%;
         display: grid;
-        @media (max-width: 767.9px){ grid-template-columns: repeat(1, 97%); }
-        @media (min-width: 768px) and (max-width: 991.9px) { grid-template-columns: repeat(2, 47%); }
-        @media (min-width: 992px){ grid-template-columns: repeat(3, 31%); }
+        // @media (max-width: 767.9px){ grid-template-columns: repeat(1, 97%); }
+        // @media (min-width: 768px) and (max-width: 991.9px) { grid-template-columns: repeat(2, 47%); }
+        // @media (min-width: 992px){ grid-template-columns: repeat(3, 31%); }
+        @media (max-width: 575.09px){ grid-template-columns: repeat(1, 85%); }
+        @media (min-width: 576px) and (max-width: 768px) { grid-template-columns: repeat(2, 47%); }
+        @media (min-width: 768.01px){ grid-template-columns: repeat(3, 31%); }
         justify-content: space-evenly;
         .projects__wrapper__item{
             height: 62vh;
@@ -434,6 +437,7 @@ header{
         .carousel-inner{
             width: 75%;
             height: 75vh;
+            @media (max-width: 575.09px){ height: 40vh; }
             margin: auto;
             box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
             border-radius: 1.0rem;
