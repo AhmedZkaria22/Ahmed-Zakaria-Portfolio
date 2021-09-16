@@ -1,7 +1,6 @@
+
 body *{
-    &:not(img,i){
-        font-family: 'Poppins', sans-serif;
-    }
+    &:not(img,i){ font-family: 'Poppins', sans-serif; }    
 }
 
 :root{
@@ -11,6 +10,8 @@ body *{
     --textColor: #051e34;
     --lightColor: #f6f7f9;
     --projectBrdColor: #545b6261; 
+    --projectItemBack: #f6f7f9cf;
+    --formBtnBack: rgb(5 30 52 / 60%);
     --pensShadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
     --footerPolygon: polygon(0% 0%, 0% 100%, 100% 100%);
 }
@@ -100,6 +101,18 @@ h2{
 
 p{ color: var(--textColor); }
 
+::-webkit-scrollbar { width: 5px; }
+    
+::-webkit-scrollbar-track {
+    background: var(--backwallperColor);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--highlightColor);
+    border-radius: 10px;
+}
+
 header{
     width: 100%;
     overflow: auto;
@@ -156,12 +169,12 @@ header{
     .header__menu{
         position: fixed;
         top: 3rem;
-        right: 0rem;
+        right: 0.7%;
         background-color: var(--backmenuColor);
         text-decoration: none;
         z-index: 9;
         padding: 0.5rem;
-        padding-right: 5rem;
+        padding-right: 7.1%;
         border: 0.2rem solid var(--highlightColor);
         border-radius: 0.4rem;
         display: none;
@@ -262,7 +275,8 @@ header{
 
 }
 
-#skills, #projects, #certificates, #pens{ margin: 7rem auto 3rem; 
+#skills, #projects, #certificates, #pens, #feedback{ 
+    margin: 7rem auto 3rem; 
     &>h2{ animation: sectionHead 0.8s ease .1s; }
 }
 
@@ -332,6 +346,7 @@ header{
         font-size: 1.2rem;
         cursor: pointer;
         animation: rtg infinite 5s linear;
+        transition: all 0.5s linear 0s;
     }
 
     .projects__filtersWrapper{
@@ -340,12 +355,17 @@ header{
         right: -3%;
         background-color: var(--backmenuColor);
         text-decoration: none;
-        z-index: 9;
+        z-index: 8;
         padding: 0.5rem;
-        padding-right: 5rem;
+        // padding-right: 5rem;
         border: 0.2rem solid var(--highlightColor);
         border-radius: 0.4rem;
         display: none;
+        padding-right: 5%;
+        max-height: 70vh;
+        overflow: auto;
+        transition: all 0.5s linear 0s;
+
         .form-group{
             color: var(--lightColor);
             display: block;
@@ -385,12 +405,6 @@ header{
                 text-transform: uppercase;
                 font-weight: 400;
                 color: var(--textColor);
-                svg{
-                    margin-left: 2rem;
-                    color: var(--backwallperColor);
-                    background-color: var(--textColor);
-                    border-radius: 50%;
-                }
             }
 
             .projects__wrapper__item__imgWrapper{
@@ -401,6 +415,7 @@ header{
                 border-radius: 0.5rem;
                 border-bottom-right-radius: 1.5rem;
                 margin-bottom: 1.0rem;
+                position: relative;
 
                 img{
                     display: block;
@@ -408,6 +423,29 @@ header{
                     height: 100%;
                     transition: all 0.4s linear 0s;
                 }    
+
+                .projects__wrapper__item__imgWrapper__langs{
+                    position: absolute;
+                    top: 0rem;
+                    left: 0rem;
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--projectItemBack);
+                    padding: 1.0rem;
+                    text-decoration: none;
+                    opacity: 0;
+                    transition: all 0.2s linear 0s;
+                    p{
+                        color: var(--highlightColor);
+                        font-weight: 600;
+                    }
+                    span{
+                        display: inline-block;
+                        width: 50%;
+                        color: var(--backmenuColor);
+                        font-weight: 500;
+                    }
+                }
             }
 
             &:hover{
@@ -425,6 +463,18 @@ header{
 
                 span{ color: rgba(0, 128, 0, 0.705); }
             }
+
+            .projects__wrapper__item__controlls{
+                display: flex;      justify-content: center;     align-items: center;
+                &>*{ display: inline-block;  margin-inline: 0.3rem!important;}
+                svg{ 
+                    font-size: larger;
+                    color: #ffbf00;
+                    margin: 0;
+                    cursor: pointer;
+                }
+                a{ margin: 0; padding: 0; }
+            }
         }
     }
 }
@@ -436,8 +486,10 @@ header{
         }
         .carousel-inner{
             width: 75%;
-            height: 75vh;
-            @media (max-width: 575.09px){ height: 40vh; }
+            @media (max-width: 575.9px){ height: 40vh; }
+            @media (min-width: 576px) and (max-width: 767.9px) { height: 48vh; }
+            @media (min-width: 768px) and (max-width: 991.9px) { height: 52vh; }
+            @media (min-width: 992px){ height: 75vh; }                
             margin: auto;
             box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
             border-radius: 1.0rem;
@@ -478,7 +530,8 @@ header{
     .pens__wrapper{
         width: 100%;
         display: grid;
-        @media (max-width: 767.9px){ grid-template-columns: repeat(1, 85%); }
+
+        @media (max-width: 767.9px){ grid-template-columns: repeat(1, 78%); }
         @media (min-width: 768px) and (max-width: 991.9px) { grid-template-columns: repeat(2, 43%); }
         @media (min-width: 992px){ grid-template-columns: repeat(3, 31%); }
         justify-content: space-evenly;
@@ -502,10 +555,35 @@ header{
                 text-align: center;
                 text-transform: capitalize;
                 font-weight: 400;
+                @media (max-width: 767.9px){ margin-top: 2rem; }
+                @media (min-width: 768px) and (max-width: 991.9px) { margin-top: 3rem; }
+                @media (min-width: 992px){ margin-top: 4rem; }
             }
             &:hover{
                 transform: scale(1.05);
             }
+        }
+    }
+}
+
+#feedback{
+    margin-inline: 7.5%;
+    form{
+        width: 100%;
+        text-align: right;
+        .form-group{
+            text-align: left;
+            .form-label{ color: var(--textColor); }
+            .form-control{
+                &:focus{ outline: none;  box-shadow: none; }
+            }
+        }
+        button{ 
+            width: 40%;     
+            background-color: var(--textColor);   color: var(--lightColor);
+            border: none;
+            &:hover{ background-color: var(--formBtnBack)!important; color: #f6f7f9!important;}
+            &:focus{ box-shadow: none;  outline: none; }
         }
     }
 }

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 let menuFunSensor = true;  
 export const menuFun = () => {
     if ( menuFunSensor ) {
@@ -24,58 +22,6 @@ export const filterFun = () => {
     }
 }
 
-
-// let arr = [];
-/*export  const projectsFun = (e) => {
-    if (e.target.checked) {        
-      arr.push(e.target.nextSibling.textContent);
-      // if(filterArr.indexOf(e.target.nextSibling.textContent) === -1){ filterArr = [ ...filterArr, e.target.nextSibling.textContent ]; }
-      for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item').length; i++){
-        document.querySelectorAll('.projects__wrapper__item')[i].style.display = 'none'
-      }           
-    // setHandelLoopStr('.projects__wrapper__item');
-    // handelLoop('none');
-      if( arr.length === 1 ) {
-        for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item.'+arr[0]+'').length; i++){
-          document.querySelectorAll('.projects__wrapper__item.'+arr[0]+'')[i].style.display = 'block'
-        } 
-      } else if( arr.length > 1 ){
-          for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item.'+arr.join(".")+'').length; i++){
-            document.querySelectorAll('.projects__wrapper__item.'+arr.join(".")+'')[i].style.display = 'block'
-          }
-      } else{
-        for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item').length; i++){
-          document.querySelectorAll('.projects__wrapper__item')[i].style.display = 'block'
-        } 
-      } 
-      // console.log(arr, filterArr, document.querySelectorAll(`.projects__wrapper__item.${filterArr.join(".")}`));
-
-    } else{
-
-      arr.splice( arr.indexOf(e.target.nextSibling.textContent) ,1);
-      // if(filterArr.indexOf(e.target.nextSibling.textContent) !== -1){ filterArr = filterArr.filter( item => {
-      //   return item !== e.target.nextSibling.textContent
-      // }); }
-      for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item').length; i++){
-        document.querySelectorAll('.projects__wrapper__item')[i].style.display = 'none'
-      }            
-      if( arr.length === 1 ) {
-        for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item.'+arr[0]+'').length; i++){
-          document.querySelectorAll('.projects__wrapper__item.'+arr[0]+'')[i].style.display = 'block'
-        } 
-      } else if( arr.length > 1 ){
-          for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item.'+arr.join(".")+'').length; i++){
-            document.querySelectorAll('.projects__wrapper__item.'+arr.join(".")+'')[i].style.display = 'block'
-          }
-      } else{
-        for(let i = 0; i<document.querySelectorAll('.projects__wrapper__item').length; i++){
-          document.querySelectorAll('.projects__wrapper__item')[i].style.display = 'block'
-        } 
-      } 
-      // console.log(arr, filterArr, document.querySelectorAll(`.projects__wrapper__item.${filterArr.join(".")}`));
-    }
-    console.log( e.target.getAttribute("checked") , e.target.checked );
-}*/
 
 let filterArr = [];
 export const handelProjectsFilter = (e) => {
@@ -121,8 +67,10 @@ export  const colorMoodFun = (e) => {
         document.documentElement.style.setProperty("--lightColor", "#051e34");
         document.documentElement.style.setProperty("--textColor", "#f6f7f9");
         document.documentElement.style.setProperty("--projectBrdColor", "#f6f7f9a8");   
+        document.documentElement.style.setProperty("--projectItemBack", "#051e34cf");
+        document.documentElement.style.setProperty("--formBtnBack", "rgb(246 247 249 / 60%)");
         document.documentElement.style.setProperty("--pensShadow", "rgb(70 74 77) 0px 1px 2px 0px, rgb(70 74 77) 0px 1px 3px 1px");         
-        document.documentElement.style.setProperty("--footerPolygon", "polygon(100% 0%, 0% 100%, 100% 100%)");
+        document.documentElement.style.setProperty("--footerPolygon", "polygon(100% 0%, 0% 100%, 100% 100%)");        
     }
     else{
         document.querySelector('.header__colorMoodWrapper__sun').style.display = "block";
@@ -133,7 +81,42 @@ export  const colorMoodFun = (e) => {
         document.documentElement.style.setProperty("--lightColor", "#f6f7f9");
         document.documentElement.style.setProperty("--textColor", "#051e34");
         document.documentElement.style.setProperty("--projectBrdColor", "#545b6261");
+        document.documentElement.style.setProperty("--projectItemBack", "#f6f7f9cf");
+        document.documentElement.style.setProperty("--formBtnBack", "rgb(5 30 52 / 60%)");
         document.documentElement.style.setProperty("--pensShadow", "rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px");   
         document.documentElement.style.setProperty("--footerPolygon", "polygon(0% 0%, 0% 100%, 100% 100%)");
     }
 }
+
+
+document.addEventListener('scroll', () => {
+  let el2 = document.getElementById("hero").offsetHeight;
+  let el3 = document.getElementById("skills").offsetHeight;
+  let el4 = document.getElementById("projects").offsetHeight;
+  let trg = document.querySelector(".projects__filter");
+  let trg2 = document.querySelector(".projects__filtersWrapper");
+  
+  if( window.scrollY <= (112 + el2 + el3) ){ 
+    trg.style.top = '0.1%';  
+    trg2.style.top = '0.7%'; 
+    trg2.style.bottom = 'auto'; 
+  }else if( window.scrollY > (112 + el2 + el3) && window.scrollY < (-272 + el2 + el3 + el4) ){
+    const topVal = `${window.scrollY - (112 + el2 + el3)}px`; 
+    const topVal2 = `${window.scrollY - (82 + el2 + el3)}px`; 
+    trg.style.top = topVal;      
+    trg2.style.top = topVal2;      
+  }else if( window.scrollY >= (-272 + el2 + el3 + el4) ){
+    trg2.style.top = 'auto'; 
+    trg2.style.bottom = '1.5%'; 
+    if( window.innerWidth < 575 ){ 
+      trg.style.top = 'auto'; trg.style.bottom = '1.1%';
+      trg2.style.top = 'auto'; trg2.style.bottom = '1.5%';
+    }else if( window.innerWidth >= 575 && window.innerWidth <= 768 ){ 
+      trg.style.top = 'auto'; trg.style.bottom = '2%';
+      trg2.style.top = 'auto'; trg2.style.bottom = '2.8%';
+    }else if( window.innerWidth > 768 ){ 
+      trg.style.top = 'auto'; trg.style.bottom = '2.8%'; 
+      trg2.style.top = 'auto'; trg2.style.bottom = '3.5%';
+    }
+  }
+});

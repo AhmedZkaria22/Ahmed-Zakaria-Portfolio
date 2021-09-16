@@ -1,4 +1,3 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'aos/dist/aos.css'
 import './Styles/Portfolio.css';
@@ -61,6 +60,7 @@ import Project from './Components/Project';
 import Pen from './Components/Pen';
 import { menuFun, filterFun, colorMoodFun, handelProjectsFilter } from './Plugin';
 import { useEffect } from 'react';
+import WriteTestimonial from './Components/WriteTestimonial';
 
 function App() {
   useEffect(() => {
@@ -130,7 +130,7 @@ function App() {
         {/* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  SKILLS / </h2> */}
         <h2>  SKILLS / </h2>
         <div className={'skills__container'}
-         data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
+          data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
           <Skill SkillIcon={SiHtml5} SkillName='Html / Html5'/>
           <Skill SkillIcon={SiCss3} SkillName='Css / Css3'/>
           <Skill SkillIcon={SiJavascript} SkillName='Js : basic, dom, bom, oop'/>
@@ -180,32 +180,34 @@ function App() {
           }
         </div>
         
-        <div className={'projects__wrapper'}>
+        <div className={'projects__wrapper'}> 
           {/* data-aos='slide-up' data-aos-delay='400' data-aos-duration='1200' data-aos-easing="linear"> */}
-            <Project preload={['Lumia Theme', PLumia, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Lumia-Theme/Lumia.html']}/>
-            <Project preload={['Vesperr Theme', PVesperr, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Vesperr-Theme/Vesperr.html']}/>
-            <Project preload={['Portfolio-card Theme', PPortfolioCard, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Portofolio-Theme/Portfolio.html']}/>
-            <Project preload={['EliteCrop Theme', PEliteCrop, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/EliteCrop/EliteCrop.html']}/>
+            <Project preload={['Lumia Theme', PLumia, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Lumia-Theme/Lumia.html', 'https://github.com/AhmedZkaria22/Lumia-Theme']}/>
+            <Project preload={['Vesperr Theme', PVesperr, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Vesperr-Theme/Vesperr.html', 'https://github.com/AhmedZkaria22/Vesperr-Theme']}/>
+            <Project preload={['Portfolio-card Theme', PPortfolioCard, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Portofolio-Theme/Portfolio.html', 'https://github.com/AhmedZkaria22/Portofolio-Theme']}/>
+            <Project preload={['EliteCrop Theme', PEliteCrop, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/EliteCrop/EliteCrop.html', 'https://github.com/AhmedZkaria22/EliteCrop']}/>
+            
             <Project preload={['Wordpress Portfolio', PWpPort, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/?fbclid=IwAR3WqAQda5_q1iRLcTEy364YWLUliM7v994GIHS_9TDoqTdNjwObG2N_ckY']}/>
-            {/* <Project preload={['Design Agency', PWpDes, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/design-agency-landing-page/' , 'code']}/> */}
+            {/* <Project preload={['Design Agency', PWpDes, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/design-agency-landing-page/' , 'code']}/> */}            
             <Project preload={['Design Agency', PWpDes, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/design-agency-landing-page/']}/>
             <Project preload={['Doctor’s Office', PWpDoc, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/do-landing/']}/>
             <Project preload={['Boutique Ar-En', PWpBotq, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/boutique-landing/']}/>
             <Project preload={['Fada Clone', PWpFada, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/fada-home/']}/>
             <Project preload={['Yoga Landing', PWpYgLnd, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/yoga-landing/']}/>
             <Project preload={['Royal Returant', PWpRlRst, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/royal-restaurant/']}/>
-            <Project preload={['Personal Theme', PPersonal, ['Html', 'Css'], 'https://ahmedzkaria22.github.io/Personal/Index.html']}/>
-            <Project preload={['Trafalgar Theme', PTrafalgar, ['Html', 'Css', 'Scss'], 'https://ahmedzkaria22.github.io/Trafalgar/Index.html']}/>
-            <Project preload={['Mogo Theme', PMogo, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/Mogo/Index.html']}/>
-            <Project preload={['ColorLip-app Theme', PColorLip, ['Html', 'Css', 'Scss', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/ColorLip/Index.html']}/>            
-            <Project preload={['Pyramid Glass Clone', PPyramid, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Pyramid-Glass/Glassware.html']}/>
-            <Project preload={['React Todo List', PTodo, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx'], 'https://ahmedzkaria22.github.io/React-TodoList-2/']}/>
-            <Project preload={['Budget Tracker , Photo Grid , Authentication', PBudget, ['Css', 'Responsive', 'Js', 'React', 'Route', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Firebase/']}/>
-            <Project preload={['Abdo Store', PAbdoSt, ['Css', 'Responsive', 'Js', 'React', 'Route', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-ECommerce/#/ReactEcommerceHome']}/>
-            <Project preload={['React Chat', PChat, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Chat/']}/>
-            <Project preload={['Ball Sort ', PBall, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Redux', 'DS-Algo'], 'https://ahmedzkaria22.github.io/Ball-Sort/']}/>
-            <Project preload={['Weather App', PWeather, ['Css', 'Scss', 'Js', 'React', 'Route', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/Weather-App/#/ReactWeatherHome']}/>
-            <Project preload={['Netflix Clone', PNetflix, ['Css', 'Scss', 'Js', 'React', 'Route', 'Redux', 'Redux-Thunk', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/React-Netflix-Clone/#/ReactNetflixHome']}/>
+            
+            <Project preload={['Personal Theme', PPersonal, ['Html', 'Css'], 'https://ahmedzkaria22.github.io/Personal/Index.html', 'https://github.com/AhmedZkaria22/Personal']}/>
+            <Project preload={['Trafalgar Theme', PTrafalgar, ['Html', 'Css', 'Scss'], 'https://ahmedzkaria22.github.io/Trafalgar/Index.html', 'https://github.com/AhmedZkaria22/Trafalgar']}/>
+            <Project preload={['Mogo Theme', PMogo, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/Mogo/Index.html', 'https://github.com/AhmedZkaria22/Mogo']}/>
+            <Project preload={['ColorLip-app Theme', PColorLip, ['Html', 'Css', 'Scss', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/ColorLip/Index.html', 'https://github.com/AhmedZkaria22/ColorLip']}/>            
+            <Project preload={['Pyramid Glass Clone', PPyramid, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Pyramid-Glass/Glassware.html', 'https://github.com/AhmedZkaria22/Pyramid-Glass']}/>
+            <Project preload={['React Todo List', PTodo, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx'], 'https://ahmedzkaria22.github.io/React-TodoList-2/', 'https://github.com/AhmedZkaria22/React-TodoList-2']}/>
+            <Project preload={['Budget Tracker , Photo Grid , Authentication', PBudget, ['Css', 'Responsive', 'Js', 'React', 'Route', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Firebase/', 'https://github.com/AhmedZkaria22/React-Firebase']}/>
+            <Project preload={['Abdo Store', PAbdoSt, ['Css', 'Responsive', 'Js', 'React', 'Route', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-ECommerce/#/ReactEcommerceHome', 'https://github.com/AhmedZkaria22/React-ECommerce']}/>
+            <Project preload={['React Chat', PChat, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Chat/', 'https://github.com/AhmedZkaria22/React-Chat']}/>
+            <Project preload={['Ball Sort ', PBall, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Redux', 'DS-Algo'], 'https://ahmedzkaria22.github.io/Ball-Sort/', 'https://github.com/AhmedZkaria22/Ball-Sort']}/>
+            <Project preload={['Weather App', PWeather, ['Css', 'Scss', 'Js', 'React', 'Route', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/Weather-App/#/ReactWeatherHome', 'https://github.com/AhmedZkaria22/Weather-App']}/>
+            <Project preload={['Netflix Clone', PNetflix, ['Css', 'Scss', 'Js', 'React', 'Route', 'Redux', 'Redux-Thunk', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/React-Netflix-Clone/#/ReactNetflixHome', 'https://github.com/AhmedZkaria22/React-Netflix-Clone']}/>
         </div>
       </section>
 
@@ -239,6 +241,11 @@ function App() {
           <Pen preload={[pen3, 'polygons using border-radius , clip-path-polygon', 'https://codepen.io/ahmedzkaria22/pen/poEJNvQ']}/>
           <Pen preload={[pen4, 'az Plugins dream', 'https://codepen.io/ahmedzkaria22/pen/PoGpdJp']}/>      
         </div>
+      </section>
+
+      <section id='feedback'>
+        <h2> Awesome Vision / </h2>
+        <WriteTestimonial />
       </section>
 
       <footer className={'text-center'}>

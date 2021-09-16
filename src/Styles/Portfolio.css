@@ -9,6 +9,8 @@ body *:not(img, i) {
   --textColor: #051e34;
   --lightColor: #f6f7f9;
   --projectBrdColor: #545b6261;
+  --projectItemBack: #f6f7f9cf;
+  --formBtnBack: rgb(5 30 52 / 60%);
   --pensShadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
   --footerPolygon: polygon(0% 0%, 0% 100%, 100% 100%);
 }
@@ -166,6 +168,20 @@ p {
   color: var(--textColor);
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--backwallperColor);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--highlightColor);
+  border-radius: 10px;
+}
+
 header {
   width: 100%;
   overflow: auto;
@@ -241,12 +257,12 @@ header .header__menuBtn:hover svg {
 header .header__menu {
   position: fixed;
   top: 3rem;
-  right: 0rem;
+  right: 0.7%;
   background-color: var(--backmenuColor);
   text-decoration: none;
   z-index: 9;
   padding: 0.5rem;
-  padding-right: 5rem;
+  padding-right: 7.1%;
   border: 0.2rem solid var(--highlightColor);
   border-radius: 0.4rem;
   display: none;
@@ -366,10 +382,10 @@ header .header__menu a {
           box-shadow: none;
 }
 
-#skills, #projects, #certificates, #pens {
+#skills, #projects, #certificates, #pens, #feedback {
   margin: 7rem auto 3rem;
 }
-#skills > h2, #projects > h2, #certificates > h2, #pens > h2 {
+#skills > h2, #projects > h2, #certificates > h2, #pens > h2, #feedback > h2 {
   -webkit-animation: sectionHead 0.8s ease 0.1s;
           animation: sectionHead 0.8s ease 0.1s;
 }
@@ -469,6 +485,8 @@ header .header__menu a {
   cursor: pointer;
   -webkit-animation: rtg infinite 5s linear;
           animation: rtg infinite 5s linear;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
 }
 #projects .projects__filtersWrapper {
   position: absolute;
@@ -476,12 +494,16 @@ header .header__menu a {
   right: -3%;
   background-color: var(--backmenuColor);
   text-decoration: none;
-  z-index: 9;
+  z-index: 8;
   padding: 0.5rem;
-  padding-right: 5rem;
   border: 0.2rem solid var(--highlightColor);
   border-radius: 0.4rem;
   display: none;
+  padding-right: 5%;
+  max-height: 70vh;
+  overflow: auto;
+  -webkit-transition: all 0.5s linear 0s;
+  transition: all 0.5s linear 0s;
 }
 #projects .projects__filtersWrapper .form-group {
   color: var(--lightColor);
@@ -538,12 +560,6 @@ header .header__menu a {
   font-weight: 400;
   color: var(--textColor);
 }
-#projects .projects__wrapper .projects__wrapper__item h5 svg {
-  margin-left: 2rem;
-  color: var(--backwallperColor);
-  background-color: var(--textColor);
-  border-radius: 50%;
-}
 #projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__imgWrapper {
   width: 100%;
   height: 85%;
@@ -552,6 +568,7 @@ header .header__menu a {
   border-radius: 0.5rem;
   border-bottom-right-radius: 1.5rem;
   margin-bottom: 1rem;
+  position: relative;
 }
 #projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__imgWrapper img {
   display: block;
@@ -559,6 +576,29 @@ header .header__menu a {
   height: 100%;
   -webkit-transition: all 0.4s linear 0s;
   transition: all 0.4s linear 0s;
+}
+#projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__imgWrapper .projects__wrapper__item__imgWrapper__langs {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--projectItemBack);
+  padding: 1rem;
+  text-decoration: none;
+  opacity: 0;
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+#projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__imgWrapper .projects__wrapper__item__imgWrapper__langs p {
+  color: var(--highlightColor);
+  font-weight: 600;
+}
+#projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__imgWrapper .projects__wrapper__item__imgWrapper__langs span {
+  display: inline-block;
+  width: 50%;
+  color: var(--backmenuColor);
+  font-weight: 500;
 }
 #projects .projects__wrapper .projects__wrapper__item:hover .projects__wrapper__item__imgWrapper img {
   -webkit-transform: scale(1.1);
@@ -576,21 +616,60 @@ header .header__menu a {
 #projects .projects__wrapper .projects__wrapper__item > p span {
   color: rgba(0, 128, 0, 0.705);
 }
+#projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__controlls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__controlls > * {
+  display: inline-block;
+  margin-inline: 0.3rem !important;
+}
+#projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__controlls svg {
+  font-size: larger;
+  color: #ffbf00;
+  margin: 0;
+  cursor: pointer;
+}
+#projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__controlls a {
+  margin: 0;
+  padding: 0;
+}
 
 #certificates .certificates__carousel .carousel-indicators {
   display: none;
 }
 #certificates .certificates__carousel .carousel-inner {
   width: 75%;
-  height: 75vh;
   margin: auto;
   -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
           box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   border-radius: 1rem;
 }
-@media (max-width: 575.09px) {
+@media (max-width: 575.9px) {
   #certificates .certificates__carousel .carousel-inner {
     height: 40vh;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.9px) {
+  #certificates .certificates__carousel .carousel-inner {
+    height: 48vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.9px) {
+  #certificates .certificates__carousel .carousel-inner {
+    height: 52vh;
+  }
+}
+@media (min-width: 992px) {
+  #certificates .certificates__carousel .carousel-inner {
+    height: 75vh;
   }
 }
 #certificates .certificates__carousel .carousel-inner .carousel-item {
@@ -645,8 +724,8 @@ header .header__menu a {
 }
 @media (max-width: 767.9px) {
   #pens .pens__wrapper {
-    -ms-grid-columns: (85%)[1];
-    grid-template-columns: repeat(1, 85%);
+    -ms-grid-columns: (78%)[1];
+    grid-template-columns: repeat(1, 78%);
   }
 }
 @media (min-width: 768px) and (max-width: 991.9px) {
@@ -685,9 +764,58 @@ header .header__menu a {
   text-transform: capitalize;
   font-weight: 400;
 }
+@media (max-width: 767.9px) {
+  #pens .pens__wrapper .pens__wrapper__item p {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.9px) {
+  #pens .pens__wrapper .pens__wrapper__item p {
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 992px) {
+  #pens .pens__wrapper .pens__wrapper__item p {
+    margin-top: 4rem;
+  }
+}
 #pens .pens__wrapper .pens__wrapper__item:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+#feedback {
+  margin-inline: 7.5%;
+}
+#feedback form {
+  width: 100%;
+  text-align: right;
+}
+#feedback form .form-group {
+  text-align: left;
+}
+#feedback form .form-group .form-label {
+  color: var(--textColor);
+}
+#feedback form .form-group .form-control:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+#feedback form button {
+  width: 40%;
+  background-color: var(--textColor);
+  color: var(--lightColor);
+  border: none;
+}
+#feedback form button:hover {
+  background-color: var(--formBtnBack) !important;
+  color: #f6f7f9 !important;
+}
+#feedback form button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
 }
 
 footer {
