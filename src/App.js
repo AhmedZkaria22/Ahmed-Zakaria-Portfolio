@@ -198,7 +198,7 @@ function App() {
             
             <Project preload={['Personal Theme', PPersonal, ['Html', 'Css'], 'https://ahmedzkaria22.github.io/Personal/Index.html', 'https://github.com/AhmedZkaria22/Personal']}/>
             <Project preload={['Trafalgar Theme', PTrafalgar, ['Html', 'Css', 'Scss'], 'https://ahmedzkaria22.github.io/Trafalgar/Index.html', 'https://github.com/AhmedZkaria22/Trafalgar']}/>
-            <Project preload={['Mogo Theme', PMogo, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/Mogo/Index.html', 'https://github.com/AhmedZkaria22/Mogo']}/>
+            <Project preload={['Mogo Theme', PMogo, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Mogo/Index.html', 'https://github.com/AhmedZkaria22/Mogo']}/>
             <Project preload={['ColorLip-app Theme', PColorLip, ['Html', 'Css', 'Scss', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/ColorLip/Index.html', 'https://github.com/AhmedZkaria22/ColorLip']}/>            
             <Project preload={['Pyramid Glass Clone', PPyramid, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Pyramid-Glass/Glassware.html', 'https://github.com/AhmedZkaria22/Pyramid-Glass']}/>
             <Project preload={['React Todo List', PTodo, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx'], 'https://ahmedzkaria22.github.io/React-TodoList-2/', 'https://github.com/AhmedZkaria22/React-TodoList-2']}/>
