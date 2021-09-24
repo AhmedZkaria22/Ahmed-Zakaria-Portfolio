@@ -40,6 +40,7 @@ import PChat from './Assets/images/projects/Chat.png';
 import PBall from './Assets/images/projects/BallSort.png';
 import PWeather from './Assets/images/projects/WeatherApp.png';
 import PNetflix from './Assets/images/projects/Netflix.png';
+import PRevealSkeleton from './Assets/images/projects/ReactReveal&Skeleton.png';
 
 import pen1 from './Assets/images/codepen1.png';
 import pen2 from './Assets/images/codepen2.png';
@@ -67,7 +68,7 @@ function App() {
     Aos.init({});
   }, []);
   const certificatesImages = [ IFiti, IHtml, ICss, IResponsive, IJs, IJquery, IReact, IWordpress, ISql, IJava ];
-  const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Route', 'Redux', 'Redux-Thunk', 'Api', 'DS-Algo', 'Firebase', 'Wordpress'];
+  const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Route', 'Redux', 'Redux-Thunk', 'Api', 'DS-Algo', 'Firebase', 'Wordpress', 'Skeleton', 'Animation'];
     
   return (
     <>
@@ -208,6 +209,7 @@ function App() {
             <Project preload={['Ball Sort ', PBall, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Redux', 'DS-Algo'], 'https://ahmedzkaria22.github.io/Ball-Sort/', 'https://github.com/AhmedZkaria22/Ball-Sort']}/>
             <Project preload={['Weather App', PWeather, ['Css', 'Scss', 'Js', 'React', 'Route', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/Weather-App/#/ReactWeatherHome', 'https://github.com/AhmedZkaria22/Weather-App']}/>
             <Project preload={['Netflix Clone', PNetflix, ['Css', 'Scss', 'Js', 'React', 'Route', 'Redux', 'Redux-Thunk', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/React-Netflix-Clone/#/ReactNetflixHome', 'https://github.com/AhmedZkaria22/React-Netflix-Clone']}/>
+            <Project preload={['React reveal & Skeleton', PRevealSkeleton, ['Css', 'Scss', 'Js', 'React', 'Jsx', 'React-Reveal', 'Skeleton', 'Animation'], 'https://ahmedzkaria22.github.io/React-Animation-Skeleton/', 'https://github.com/AhmedZkaria22/React-Animation-Skeleton']}/>
         </div>
       </section>
 
