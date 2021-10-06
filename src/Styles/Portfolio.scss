@@ -263,7 +263,15 @@ header{
             border: none;
             margin-inline: 0.5rem;
             &:focus{ border: none;  outline: none; box-shadow: none; }
-            &:last-of-type{ color: var(--textColor); }                
+            &:last-of-type{ 
+                background-color: var(--highlightColor);
+                color: var(--lightColor);
+                padding: 0.45rem 1rem;
+                svg{
+                    font-size: 1.25rem;
+                    color: var(--lightColor);    
+                }
+            }                
             svg{
                 font-size: 2rem;
                 color: var(--textColor);

@@ -41,6 +41,7 @@ import PBall from './Assets/images/projects/BallSort.png';
 import PWeather from './Assets/images/projects/WeatherApp.png';
 import PNetflix from './Assets/images/projects/Netflix.png';
 import PRevealSkeleton from './Assets/images/projects/ReactReveal&Skeleton.png';
+import PRGrid from './Assets/images/projects/ReactGrid.png';
 
 import pen1 from './Assets/images/codepen1.png';
 import pen2 from './Assets/images/codepen2.png';
@@ -62,6 +63,8 @@ import Pen from './Components/Pen';
 import { menuFun, filterFun, colorMoodFun, handelProjectsFilter } from './Plugin';
 import { useEffect } from 'react';
 import WriteTestimonial from './Components/WriteTestimonial';
+import cvFile from './Assets/AhmedZakariaCV.pdf';
+import {HiDownload} from 'react-icons/hi';
 
 function App() {
   useEffect(() => {
@@ -112,9 +115,7 @@ function App() {
               <Button href='https://github.com/AhmedZkaria22' target='_blank'
                 data-aos='fade-down' data-aos-delay='900' data-aos-duration='1000'
               ><FaGithub/></Button>
-              <Button variant="primary" href='https://drive.google.com/file/d/107GRHhCyB3EPz-qSPMMEIWRAFMNFbgR3/view?usp=sharing' target='_blank'
-                data-aos='fade-down' data-aos-delay='1000' data-aos-duration='1100' 
-              >Resume</Button>
+              <a href={cvFile}  className='btn'  download data-aos='fade-down' data-aos-delay='1000' data-aos-duration='1100'>  Resume  <HiDownload /> </a>
             </div>
           </Col>
 
@@ -210,6 +211,7 @@ function App() {
             <Project preload={['Weather App', PWeather, ['Css', 'Scss', 'Js', 'React', 'Route', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/Weather-App/#/ReactWeatherHome', 'https://github.com/AhmedZkaria22/Weather-App']}/>
             <Project preload={['Netflix Clone', PNetflix, ['Css', 'Scss', 'Js', 'React', 'Route', 'Redux', 'Redux-Thunk', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/React-Netflix-Clone/#/ReactNetflixHome', 'https://github.com/AhmedZkaria22/React-Netflix-Clone']}/>
             <Project preload={['React reveal & Skeleton', PRevealSkeleton, ['Css', 'Scss', 'Js', 'React', 'Jsx', 'React-Reveal', 'Skeleton', 'Animation'], 'https://ahmedzkaria22.github.io/React-Animation-Skeleton/', 'https://github.com/AhmedZkaria22/React-Animation-Skeleton']}/>
+            <Project preload={['React Grid', PRGrid, ['Css', 'Css Grid', 'Scss', 'Js', 'React', 'Jsx'], 'https://react-grid-app-a0743.web.app/']}/>
         </div>
       </section>
 

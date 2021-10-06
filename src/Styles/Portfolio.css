@@ -369,7 +369,13 @@ header .header__menu a {
           box-shadow: none;
 }
 #hero .hero__description a:last-of-type {
-  color: var(--textColor);
+  background-color: var(--highlightColor);
+  color: var(--lightColor);
+  padding: 0.45rem 1rem;
+}
+#hero .hero__description a:last-of-type svg {
+  font-size: 1.25rem;
+  color: var(--lightColor);
 }
 #hero .hero__description a svg {
   font-size: 2rem;
