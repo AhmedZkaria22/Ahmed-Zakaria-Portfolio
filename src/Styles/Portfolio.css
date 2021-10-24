@@ -168,16 +168,14 @@ p {
   color: var(--textColor);
 }
 
-::-webkit-scrollbar {
+html ::-webkit-scrollbar {
   width: 5px;
 }
-
-::-webkit-scrollbar-track {
+html ::-webkit-scrollbar-track {
   background: var(--backwallperColor);
   border-radius: 10px;
 }
-
-::-webkit-scrollbar-thumb {
+html ::-webkit-scrollbar-thumb {
   background: var(--highlightColor);
   border-radius: 10px;
 }
@@ -510,6 +508,20 @@ header .header__menu a {
   overflow: auto;
   -webkit-transition: all 0.5s linear 0s;
   transition: all 0.5s linear 0s;
+  border-right: none;
+}
+#projects .projects__filtersWrapper::-webkit-scrollbar {
+  width: 3.5px;
+}
+#projects .projects__filtersWrapper::-webkit-scrollbar-track {
+  background: var(--highlightColor);
+}
+#projects .projects__filtersWrapper::-webkit-scrollbar-thumb {
+  background: var(--backwallperColor);
+}
+#projects .projects__filtersWrapper::-webkit-scrollbar-button {
+  background: var(--highlightColor);
+  height: 2rem;
 }
 #projects .projects__filtersWrapper .form-group {
   color: var(--lightColor);
@@ -524,6 +536,8 @@ header .header__menu a {
   color: var(--lightColor) !important;
   background-color: var(--highlightColor) !important;
   margin-top: 0.4rem;
+  accent-color: var(--highlightColor);
+  border: none !important;
 }
 #projects .projects__filtersWrapper .form-group .form-check-label {
   font-size: 0.9rem;

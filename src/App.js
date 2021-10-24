@@ -42,6 +42,7 @@ import PWeather from './Assets/images/projects/WeatherApp.png';
 import PNetflix from './Assets/images/projects/Netflix.png';
 import PRevealSkeleton from './Assets/images/projects/ReactReveal&Skeleton.png';
 import PRGrid from './Assets/images/projects/ReactGrid.png';
+import PRCard from './Assets/images/projects/ReactMyCard.png';
 
 import pen1 from './Assets/images/codepen1.png';
 import pen2 from './Assets/images/codepen2.png';
@@ -71,7 +72,7 @@ function App() {
     Aos.init({});
   }, []);
   const certificatesImages = [ IFiti, IHtml, ICss, IResponsive, IJs, IJquery, IReact, IWordpress, ISql, IJava ];
-  const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Route', 'Redux', 'Redux-Thunk', 'Api', 'DS-Algo', 'Firebase', 'Wordpress', 'Skeleton', 'Animation'];
+  const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Validation', 'Route', 'Redux', 'Redux-Thunk', 'Api', 'DS-Algo', 'Firebase', 'Local-Storage', 'Skeleton', 'Animation', 'Wordpress'];
     
   return (
     <>
@@ -105,9 +106,9 @@ function App() {
               <div className={'hero__photo__small'}>
                 <img src={Ahmed}  alt='img'/>
               </div>
-              <p> 
-                I want to be a front-end developer / ui developer / client side developer because this path combines between programming and more creativity on ui features such as color-schemes and wireframing, 
-                and I have built a lot of projects that have increased my experience, I am a fast learner and always love to develop myself 
+              <p>
+                I want to be a front-end developer / ui developer / client side developer 
+                because this path combines between programming and more creativity on ui features such as color-schemes and wireframing, and I have built a lot of projects that have increased my experience, I am a fast learner and always love to develop myself
               </p>
               <Button href='https://www.linkedin.com/in/ahmed-zakaria-a554a4183' target='_blank'
                 data-aos='fade-down' data-aos-delay='800' data-aos-duration='900'
@@ -152,7 +153,7 @@ function App() {
           <Skill SkillIcon={DiGit} SkillName='Git / Github'/>
           <Skill SkillIcon={FaTrafficLight} SkillName='Ui Ux'/>
           <Skill SkillIcon={BsSearch} SkillName='Seo'/>
-          <Skill SkillIcon={GiFamilyTree} SkillName={`Data Structure & Algorithm`}/>          
+          <Skill SkillIcon={GiFamilyTree} SkillName={`Data Structure & Algorithm`}/>
           <Skill SkillIcon={SiJava} SkillName='Java'/>
           <Skill SkillIcon={SiMicrosoftsqlserver} SkillName='Sql'/>
           <Skill SkillIcon={SiMysql} SkillName='MySQL'/>
@@ -202,8 +203,8 @@ function App() {
             <Project preload={['Trafalgar Theme', PTrafalgar, ['Html', 'Css', 'Scss'], 'https://ahmedzkaria22.github.io/Trafalgar/Index.html', 'https://github.com/AhmedZkaria22/Trafalgar']}/>
             <Project preload={['Mogo Theme', PMogo, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Mogo/Index.html', 'https://github.com/AhmedZkaria22/Mogo']}/>
             <Project preload={['ColorLip-app Theme', PColorLip, ['Html', 'Css', 'Scss', 'Responsive', 'Js'], 'https://ahmedzkaria22.github.io/ColorLip/Index.html', 'https://github.com/AhmedZkaria22/ColorLip']}/>            
-            <Project preload={['Pyramid Glass Clone', PPyramid, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Pyramid-Glass/Glassware.html', 'https://github.com/AhmedZkaria22/Pyramid-Glass']}/>
-            <Project preload={['React Todo List', PTodo, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx'], 'https://ahmedzkaria22.github.io/React-TodoList-2/', 'https://github.com/AhmedZkaria22/React-TodoList-2']}/>
+            <Project preload={['Pyramid Glass Clone', PPyramid, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'Validation'], 'https://ahmedzkaria22.github.io/Pyramid-Glass/Glassware.html', 'https://github.com/AhmedZkaria22/Pyramid-Glass']}/>
+            <Project preload={['React Todo List', PTodo, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Local-Storage'], 'https://ahmedzkaria22.github.io/React-TodoList-2/', 'https://github.com/AhmedZkaria22/React-TodoList-2']}/>
             <Project preload={['Budget Tracker , Photo Grid , Authentication', PBudget, ['Css', 'Responsive', 'Js', 'React', 'Route', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Firebase/', 'https://github.com/AhmedZkaria22/React-Firebase']}/>
             <Project preload={['Abdo Store', PAbdoSt, ['Css', 'Responsive', 'Js', 'React', 'Route', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-ECommerce/#/ReactEcommerceHome', 'https://github.com/AhmedZkaria22/React-ECommerce']}/>
             <Project preload={['React Chat', PChat, ['Css', 'Scss', 'Responsive', 'Js', 'React', 'Jsx', 'Firebase'], 'https://ahmedzkaria22.github.io/React-Chat/', 'https://github.com/AhmedZkaria22/React-Chat']}/>
@@ -212,6 +213,7 @@ function App() {
             <Project preload={['Netflix Clone', PNetflix, ['Css', 'Scss', 'Js', 'React', 'Route', 'Redux', 'Redux-Thunk', 'Jsx', 'Api'], 'https://ahmedzkaria22.github.io/React-Netflix-Clone/#/ReactNetflixHome', 'https://github.com/AhmedZkaria22/React-Netflix-Clone']}/>
             <Project preload={['React reveal & Skeleton', PRevealSkeleton, ['Css', 'Scss', 'Js', 'React', 'Jsx', 'React-Reveal', 'Skeleton', 'Animation'], 'https://ahmedzkaria22.github.io/React-Animation-Skeleton/', 'https://github.com/AhmedZkaria22/React-Animation-Skeleton']}/>
             <Project preload={['React Grid', PRGrid, ['Css', 'Css Grid', 'Scss', 'Js', 'React', 'Jsx'], 'https://react-grid-app-a0743.web.app/']}/>
+            <Project preload={['React Card', PRCard, ['Css', 'Scss', 'Js', 'React', 'Route', 'Jsx', 'Validation', 'Local-Storage'], 'https://my-card-11ec7.web.app/#/PersonalForm/']}/>
         </div>
       </section>
 
