@@ -390,8 +390,12 @@ header .header__menu a {
   margin: 7rem auto 3rem;
 }
 #skills > h2, #projects > h2, #certificates > h2, #pens > h2, #feedback > h2 {
-  -webkit-animation: sectionHead 0.8s ease 0.1s;
-          animation: sectionHead 0.8s ease 0.1s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 #skills {
@@ -468,6 +472,12 @@ header .header__menu a {
   font-size: 1.8rem;
   margin-right: 1rem;
   color: var(--textColor);
+}
+#skills .skills__container .skills__container__item svg:nth-of-type(2) {
+  margin-left: -2rem;
+  z-index: 9;
+  background-color: var(--backwallperColor);
+  width: 1rem;
 }
 #skills .skills__container .skills__container__item p {
   float: left;

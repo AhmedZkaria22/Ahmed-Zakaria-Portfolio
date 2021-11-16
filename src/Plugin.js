@@ -90,33 +90,22 @@ export  const colorMoodFun = (e) => {
 
 
 document.addEventListener('scroll', () => {
-  let el2 = document.getElementById("hero").offsetHeight;
-  let el3 = document.getElementById("skills").offsetHeight;
-  let el4 = document.getElementById("projects").offsetHeight;
+  let projEl = document.getElementById("projects");
+  let certEl = document.getElementById("certificates");
   let trg = document.querySelector(".projects__filter");
   let trg2 = document.querySelector(".projects__filtersWrapper");
-  
-  if( window.scrollY <= (112 + el2 + el3) ){ 
-    trg.style.top = '0.1%';  
-    trg2.style.top = '0.7%'; 
-    trg2.style.bottom = 'auto'; 
-  }else if( window.scrollY > (112 + el2 + el3) && window.scrollY < (-272 + el2 + el3 + el4) ){
-    const topVal = `${window.scrollY - (112 + el2 + el3)}px`; 
-    const topVal2 = `${window.scrollY - (82 + el2 + el3)}px`; 
-    trg.style.top = topVal;      
-    trg2.style.top = topVal2;      
-  }else if( window.scrollY >= (-272 + el2 + el3 + el4) ){
+  if( window.scrollY <= projEl.offsetTop ){ 
+    trg.style.top = '0.1%';    trg.style.bottom = 'auto';
+    trg2.style.top = 'calc(0.1% + 20px)';   trg2.style.bottom = 'auto'; 
+  }else if( window.scrollY > projEl.offsetTop && window.scrollY < (certEl.offsetTop - (1.5 * trg2.offsetHeight)) ){
+    const topVal = `calc(${window.scrollY - projEl.offsetTop}px + 15vh)`; 
+    const topVal2 = `calc(${window.scrollY - projEl.offsetTop}px + 19vh)`; 
+    trg.style.top = topVal;      trg.style.bottom = 'auto';
+    trg2.style.top = topVal2;    trg2.style.bottom = 'auto';
+  }else{
+    trg.style.top = 'auto'; 
+    trg.style.bottom = '0.1%'; 
     trg2.style.top = 'auto'; 
-    trg2.style.bottom = '1.5%'; 
-    if( window.innerWidth < 575 ){ 
-      trg.style.top = 'auto'; trg.style.bottom = '1.1%';
-      trg2.style.top = 'auto'; trg2.style.bottom = '1.5%';
-    }else if( window.innerWidth >= 575 && window.innerWidth <= 768 ){ 
-      trg.style.top = 'auto'; trg.style.bottom = '2%';
-      trg2.style.top = 'auto'; trg2.style.bottom = '2.8%';
-    }else if( window.innerWidth > 768 ){ 
-      trg.style.top = 'auto'; trg.style.bottom = '2.8%'; 
-      trg2.style.top = 'auto'; trg2.style.bottom = '3.5%';
-    }
+    trg2.style.bottom = 'calc(0.1% + 20px)'; 
   }
 });

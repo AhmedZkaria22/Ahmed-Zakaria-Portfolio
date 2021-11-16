@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 
 function Skill(props) {
-    const {SkillIcon, SkillName} = props;
+    const {SkillIcon, SkillIcon2, SkillName} = props;
 
     const spanRef = useRef(null);
 
@@ -27,9 +27,23 @@ function Skill(props) {
                 spanRef.current.style.height= "100%";
             }}
         >
-            <span ref={spanRef} ></span>
+            {/* <span ref={spanRef} ></span>
             { React.createElement(SkillIcon, null, null) }
-            <p>{SkillName}</p>
+            <p>{SkillName}</p> */}
+            {
+                (SkillIcon2) ?
+                <>
+                    <span ref={spanRef} ></span>
+                    { React.createElement(SkillIcon, null, null) }
+                    { React.createElement(SkillIcon2, null, null) }
+                    <p>{SkillName}</p>    
+                </>
+                :<>
+                    <span ref={spanRef} ></span>
+                    { React.createElement(SkillIcon, null, null) }
+                    <p>{SkillName}</p>
+                </>
+            }
         </div>
     )
 }

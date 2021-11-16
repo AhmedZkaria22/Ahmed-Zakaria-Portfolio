@@ -54,6 +54,7 @@ import {BsSearch} from 'react-icons/bs';
 import { SiHtml5, SiCss3, SiJavascript, SiJquery, SiSass, SiBootstrap, SiReact, SiWordpress, SiJava, SiMicrosoftsqlserver, SiMysql, SiFigma, SiGmail, SiFirebase, SiRedux } from 'react-icons/si';
 import {FiMenu, FiSun, FiMoon} from 'react-icons/fi';
 import {AiOutlineSetting} from 'react-icons/ai';
+import {GoBold} from 'react-icons/go';
 import {GiFamilyTree} from 'react-icons/gi';
 import {VscJson} from 'react-icons/vsc';
 import {DiGit} from 'react-icons/di';
@@ -66,6 +67,7 @@ import { useEffect } from 'react';
 import WriteTestimonial from './Components/WriteTestimonial';
 import cvFile from './Assets/AhmedZakariaCV.pdf';
 import {HiDownload} from 'react-icons/hi';
+import Projects from './Components/Projects';
 
 function App() {
   useEffect(() => {
@@ -74,6 +76,31 @@ function App() {
   const certificatesImages = [ IFiti, IHtml, ICss, IResponsive, IJs, IJquery, IReact, IWordpress, ISql, IJava ];
   const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Validation', 'Route', 'Redux', 'Redux-Thunk', 'Api', 'DS-Algo', 'Firebase', 'Local-Storage', 'Skeleton', 'Animation', 'Wordpress'];
     
+  // const [wd, setWd] = useState(document.body.clientWidth);
+  // window.addEventListener('resize', ()=>{ setWd(document.body.clientWidth); });
+
+  const handelHeadDelay = (ht2, ht3, ht4, ht5, ht6, sectionName) => {    
+    const fnlhts = ht2 + ht3 + ht4 + ht5 + ht6 - 52 ;
+    if( window.scrollY >= fnlhts ){ 
+      document.querySelector(`#${sectionName} h2`).style.opacity = '1';      
+      document.querySelector(`#${sectionName} h2`).style.animationName = `sectionHead` ;
+    }
+  }
+
+  document.addEventListener('scroll', () => {
+    const ht2 = document.querySelector('#hero').offsetHeight ,
+    ht3 = document.querySelector('#skills').offsetHeight,
+    ht4 = document.querySelector('#projects').offsetHeight,
+    ht5 = document.querySelector('#certificates').offsetHeight,
+    ht6 = document.querySelector('#pens').offsetHeight;
+
+    handelHeadDelay(ht2,0,0,0,0, 'skills');
+    handelHeadDelay(ht2,ht3,0,0,0, 'projects');
+    handelHeadDelay(ht2,ht3,ht4,0,0, 'certificates');
+    handelHeadDelay(ht2,ht3,ht4,ht5,0, 'pens');
+    handelHeadDelay(ht2,ht3,ht4,ht5,ht6, 'feedback');
+  });
+
   return (
     <>
       <header>
@@ -106,9 +133,14 @@ function App() {
               <div className={'hero__photo__small'}>
                 <img src={Ahmed}  alt='img'/>
               </div>
-              <p>
+              {/* // <p>
                 I want to be a front-end developer / ui developer / client side developer 
                 because this path combines between programming and more creativity on ui features such as color-schemes and wireframing, and I have built a lot of projects that have increased my experience, I am a fast learner and always love to develop myself
+              </p> // */}
+              <p>
+                Iam a front-end developer,  seeking a job opportunity to increase my experience, skills and passion
+                , excited to work with team, I have built a lot of projects that have increased my experience
+                , I am a fast learner and always love to develop myself
               </p>
               <Button href='https://www.linkedin.com/in/ahmed-zakaria-a554a4183' target='_blank'
                 data-aos='fade-down' data-aos-delay='800' data-aos-duration='900'
@@ -130,10 +162,10 @@ function App() {
       </Container>
 
       <section id="skills">        
-        {/* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  SKILLS / </h2> */}
+        {/* //* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  SKILLS / </h2> */}
         <h2>  SKILLS / </h2>
-        <div className={'skills__container'}
-          data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
+        <div className={'skills__container'}>
+          {/* //* data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'> */}
           <Skill SkillIcon={SiHtml5} SkillName='Html / Html5'/>
           <Skill SkillIcon={SiCss3} SkillName='Css / Css3'/>
           <Skill SkillIcon={SiJavascript} SkillName='Js : basic, dom, bom, oop'/>
@@ -142,33 +174,42 @@ function App() {
           <Skill SkillIcon={SiBootstrap} SkillName='Bootstrap'/>
           <Skill SkillIcon={SiJavascript} SkillName='Ecma'/>
           <Skill SkillIcon={SiReact} SkillName={`React & Redux & Route`}/>
+          <Skill SkillIcon={SiReact} SkillIcon2={GoBold} SkillName={`React Bootstrap`}/>
           <Skill SkillIcon={SiRedux} SkillName='ٌRedux Thunk'/>
           <Skill SkillIcon={SiWordpress} SkillName='Wordpress'/>
         </div>
 
-        <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  Knowlage </h2>
-        <div className={'skills__container'}
-          data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
-          <Skill SkillIcon={VscJson} SkillName='Api'/>
+        <h2>  Knowlage </h2>
+        {/* //* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  Knowlage </h2> */}
+        <div className={'skills__container'}>
+          {/* //* data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'> */}          
           <Skill SkillIcon={DiGit} SkillName='Git / Github'/>
-          <Skill SkillIcon={FaTrafficLight} SkillName='Ui Ux'/>
-          <Skill SkillIcon={BsSearch} SkillName='Seo'/>
+          <Skill SkillIcon={VscJson} SkillName='Api'/>
+          <Skill SkillIcon={SiFirebase} SkillName='FireBase'/>
+          <Skill SkillIcon={FaTrafficLight} SkillName='Ui Ux'/>          
+          <Skill SkillIcon={BsSearch} SkillName='Seo'/>          
+        </div>
+
+        <h2>  Fundimental </h2>
+        {/* //* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>  Fundimental </h2> */}
+        <div className={'skills__container'}>
+          {/* //* data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'> */}
           <Skill SkillIcon={GiFamilyTree} SkillName={`Data Structure & Algorithm`}/>
           <Skill SkillIcon={SiJava} SkillName='Java'/>
           <Skill SkillIcon={SiMicrosoftsqlserver} SkillName='Sql'/>
           <Skill SkillIcon={SiMysql} SkillName='MySQL'/>
-          <Skill SkillIcon={SiFirebase} SkillName='FireBase'/>
         </div>
 
-        <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>FAMILIAR</h2>
-        <div className={'skills__container'}
-          data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'>
+        <h2>  FAMILIAR </h2>
+        {/* //* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'>FAMILIAR</h2> */}
+        <div className={'skills__container'}>
+          {/* //* data-aos='slide-right' data-aos-delay='700' data-aos-duration='1400'> */}
           <Skill SkillIcon={SiFigma} SkillName='Figma'/>
         </div>        
       </section>
 
       <section id="projects">
-      {/* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> projects / </h2>     */}
+      {/* //* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> projects / </h2> */}
       <h2> projects / </h2>
         <AiOutlineSetting className={'projects__filter'}  onClick={filterFun}/>    
         <div className={'projects__filtersWrapper'}>    
@@ -184,14 +225,14 @@ function App() {
         </div>
         
         <div className={'projects__wrapper'}> 
-          {/* data-aos='slide-up' data-aos-delay='400' data-aos-duration='1200' data-aos-easing="linear"> */}
+          {/* //* data-aos='slide-up' data-aos-delay='400' data-aos-duration='1200' data-aos-easing="linear"> */}
             <Project preload={['Lumia Theme', PLumia, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Lumia-Theme/Lumia.html', 'https://github.com/AhmedZkaria22/Lumia-Theme']}/>
             <Project preload={['Vesperr Theme', PVesperr, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Vesperr-Theme/Vesperr.html', 'https://github.com/AhmedZkaria22/Vesperr-Theme']}/>
             <Project preload={['Portfolio-card Theme', PPortfolioCard, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/Portofolio-Theme/Portfolio.html', 'https://github.com/AhmedZkaria22/Portofolio-Theme']}/>
             <Project preload={['EliteCrop Theme', PEliteCrop, ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery'], 'https://ahmedzkaria22.github.io/EliteCrop/EliteCrop.html', 'https://github.com/AhmedZkaria22/EliteCrop']}/>
             
             <Project preload={['Wordpress Portfolio', PWpPort, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/?fbclid=IwAR3WqAQda5_q1iRLcTEy364YWLUliM7v994GIHS_9TDoqTdNjwObG2N_ckY']}/>
-            {/* <Project preload={['Design Agency', PWpDes, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/design-agency-landing-page/' , 'code']}/> */}            
+            {/* //* <Project preload={['Design Agency', PWpDes, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/design-agency-landing-page/' , 'code']}/> */}
             <Project preload={['Design Agency', PWpDes, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/design-agency-landing-page/']}/>
             <Project preload={['Doctor’s Office', PWpDoc, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/do-landing/']}/>
             <Project preload={['Boutique Ar-En', PWpBotq, ['Responsive', 'Wordpress'], 'https://90dayschallenges.com/ahmedzakaria/boutique-landing/']}/>
@@ -218,10 +259,10 @@ function App() {
       </section>
 
       <section id="certificates">     
-      {/* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> certificates / </h2>         */}
+      {/* //* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> certificates / </h2> */}
       <h2> certificates / </h2>
         <Carousel interval={2000} className={"certificates__carousel"}>
-            {/* data-aos='zoom-in' data-aos-delay='100' data-aos-duration='800'>  */}
+            {/* //* data-aos='zoom-in' data-aos-delay='100' data-aos-duration='800'> */}
           {
             certificatesImages.map( (certImg, index) => {
               return(
@@ -235,13 +276,13 @@ function App() {
       </section>
 
       <section id="pens">
-      {/* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> codepen pens / </h2>
-        <p className={'text-muted'} data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> */}
+      {/* //* <h2 data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> codepen pens / </h2> */}
+        {/* //*<p className={'text-muted'} data-aos='fade-down' data-aos-delay='50' data-aos-duration='700'> */}
         <h2> codepen pens / </h2>
         <p>
           some of pens you can see more in profile </p>
         <div className={'pens__wrapper'}>  
-        {/* data-aos='slide-up' data-aos-delay='600' data-aos-duration='1200'> */}
+        {/* //* data-aos='slide-up' data-aos-delay='600' data-aos-duration='1200'> */}
           <Pen preload={[pen1, 'Hijri calendar clock', 'https://codepen.io/ahmedzkaria22/pen/GRjpQpN']}/>
           <Pen preload={[pen2, 'Facts counter number using setInterval', 'https://codepen.io/ahmedzkaria22/pen/vYXLmdX']}/>
           <Pen preload={[pen3, 'polygons using border-radius , clip-path-polygon', 'https://codepen.io/ahmedzkaria22/pen/poEJNvQ']}/>
@@ -263,12 +304,16 @@ function App() {
           <a href='https://github.com/AhmedZkaria22' target='_blank' rel="noreferrer"><FaGithub /></a>
           <a href='https://codepen.io/ahmedzkaria22' target='_blank' rel="noreferrer"><FaCodepen /></a>
           <a href='https://www.pinterest.com/zikoser/_saved/' target='_blank' rel="noreferrer"><FaPinterest /></a>
-          <a href='https://ahmedzkaria372017@gmail.com' target='_blank' rel="noreferrer"><SiGmail /></a>
+          <a href='mailto:ahmedzkaria372017@gmail.com' target='_blank' rel="noreferrer"><SiGmail /></a>
         </div>
         <p>© 2021 copyright all right reserved</p>
         <p>made with <span>♥</span> </p>
       </footer>
     </>
+
+    /*<>
+      <Projects />
+    </>*/
   );
 }
 
