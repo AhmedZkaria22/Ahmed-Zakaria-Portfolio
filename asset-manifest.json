@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Ahmed-Zakaria-Portfolio/static/css/main.66ed74e3.chunk.css",
-    "main.js": "/Ahmed-Zakaria-Portfolio/static/js/main.1dd89a70.chunk.js",
-    "main.js.map": "/Ahmed-Zakaria-Portfolio/static/js/main.1dd89a70.chunk.js.map",
+    "main.js": "/Ahmed-Zakaria-Portfolio/static/js/main.96f9e633.chunk.js",
+    "main.js.map": "/Ahmed-Zakaria-Portfolio/static/js/main.96f9e633.chunk.js.map",
     "runtime-main.js": "/Ahmed-Zakaria-Portfolio/static/js/runtime-main.3d93e5ec.js",
     "runtime-main.js.map": "/Ahmed-Zakaria-Portfolio/static/js/runtime-main.3d93e5ec.js.map",
     "static/css/2.e4e35064.chunk.css": "/Ahmed-Zakaria-Portfolio/static/css/2.e4e35064.chunk.css",
@@ -42,6 +42,8 @@
     "static/media/Personal.ab9fe135.png": "/Ahmed-Zakaria-Portfolio/static/media/Personal.ab9fe135.png",
     "static/media/PortfolioCard.d2eeae6b.png": "/Ahmed-Zakaria-Portfolio/static/media/PortfolioCard.d2eeae6b.png",
     "static/media/Pyramid.b0c4d8ed.jpg": "/Ahmed-Zakaria-Portfolio/static/media/Pyramid.b0c4d8ed.jpg",
+    "static/media/ReactAASTV1.bed5a987.png": "/Ahmed-Zakaria-Portfolio/static/media/ReactAASTV1.bed5a987.png",
+    "static/media/ReactAASTV2.9d897bc3.png": "/Ahmed-Zakaria-Portfolio/static/media/ReactAASTV2.9d897bc3.png",
     "static/media/ReactGrid.49cae080.png": "/Ahmed-Zakaria-Portfolio/static/media/ReactGrid.49cae080.png",
     "static/media/ReactMyCard.f66fe965.png": "/Ahmed-Zakaria-Portfolio/static/media/ReactMyCard.f66fe965.png",
     "static/media/ReactReveal&Skeleton.92fbab32.png": "/Ahmed-Zakaria-Portfolio/static/media/ReactReveal&Skeleton.92fbab32.png",
@@ -62,6 +64,6 @@
     "static/css/2.e4e35064.chunk.css",
     "static/js/2.73cbaa63.chunk.js",
     "static/css/main.66ed74e3.chunk.css",
-    "static/js/main.1dd89a70.chunk.js"
+    "static/js/main.96f9e633.chunk.js"
   ]
 }
