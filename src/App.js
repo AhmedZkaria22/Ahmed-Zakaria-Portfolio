@@ -43,6 +43,8 @@ import PNetflix from './Assets/images/projects/Netflix.png';
 import PRevealSkeleton from './Assets/images/projects/ReactReveal&Skeleton.png';
 import PRGrid from './Assets/images/projects/ReactGrid.png';
 import PRCard from './Assets/images/projects/ReactMyCard.png';
+import PRAAST1 from './Assets/images/projects/ReactAASTV1.png';
+import PRAAST2 from './Assets/images/projects/ReactAASTV2.png';
 
 import pen1 from './Assets/images/codepen1.png';
 import pen2 from './Assets/images/codepen2.png';
@@ -255,6 +257,8 @@ function App() {
             <Project preload={['React reveal & Skeleton', PRevealSkeleton, ['Css', 'Scss', 'Js', 'React', 'Jsx', 'React-Reveal', 'Skeleton', 'Animation'], 'https://ahmedzkaria22.github.io/React-Animation-Skeleton/', 'https://github.com/AhmedZkaria22/React-Animation-Skeleton']}/>
             <Project preload={['React Grid', PRGrid, ['Css', 'Css Grid', 'Scss', 'Js', 'React', 'Jsx'], 'https://react-grid-app-a0743.web.app/']}/>
             <Project preload={['React Card', PRCard, ['Css', 'Scss', 'Js', 'React', 'Route', 'Jsx', 'Validation', 'Local-Storage'], 'https://my-card-11ec7.web.app/#/PersonalForm/']}/>
+            <Project preload={['Arab Academy Landing Version1', PRAAST1, ['Css', 'Scss', 'Responsive', 'Bootstrap', 'Js', 'React', 'Jsx', 'Validation'], 'https://ahmedzkaria22.github.io/AAST-Task/', 'https://github.com/AhmedZkaria22/AAST-Task']}/>
+            <Project preload={['Arab Academy Landing Version2', PRAAST2, ['Css', 'Scss', 'Responsive', 'Scalable', 'Bootstrap', 'Js', 'React', 'Jsx', 'Validation', 'Animation'], 'https://ahmedzkaria22.github.io/AAST-Task-V2/', 'https://github.com/AhmedZkaria22/AAST-Task-V2']}/>
         </div>
       </section>
 
