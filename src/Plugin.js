@@ -88,7 +88,7 @@ export  const colorMoodFun = (e) => {
     }
 }
 
-/*document.addEventListener('scroll', () => {
+document.addEventListener('scroll', () => {
   let projEl = document.getElementById("projects");
   let certEl = document.getElementById("certificates");
   let trg = document.querySelector(".projects__filter");
@@ -107,4 +107,4 @@ export  const colorMoodFun = (e) => {
     trg2.style.top = 'auto'; 
     trg2.style.bottom = 'calc(0.1% + 20px)'; 
   }
-});*/
+});

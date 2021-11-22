@@ -39,6 +39,7 @@ import {VscJson} from 'react-icons/vsc';
 import {DiGit} from 'react-icons/di';
 import cvFile from './Assets/AhmedZakariaCV.pdf';
 import {HiDownload} from 'react-icons/hi';
+import {AiOutlineSetting} from 'react-icons/ai';
 // import { Link } from 'react-router-dom';
 
 
@@ -48,36 +49,37 @@ function App() {
       }, []);
     const certificatesImages = [ IFiti, IHtml, ICss, IResponsive, IJs, IJquery, IReact, IWordpress, ISql, IJava ];    
     // const latestPojs = projectsData.filter( (item, i) => i >= (projectsData.length - 6) );
+    const projectsLabel = ['Html', 'Css', 'Scss', 'Bootstrap', 'Responsive', 'Js', 'jQuery', 'React', 'Jsx', 'Validation', 'Route', 'Redux', 'Redux-Thunk', 'Api', 'DS-Algo', 'Firebase', 'Local-Storage', 'Skeleton', 'Animation', 'Wordpress'];
     const latestPojs = projectsData;
 
-    // const [wd, setWd] = useState(document.body.clientWidth);
-    // window.addEventListener('resize', ()=>{ setWd(document.body.clientWidth); });
+    const [wd, setWd] = useState(document.body.clientWidth);
+    window.addEventListener('resize', ()=>{ setWd(document.body.clientWidth); });
 
-    // const handelHeadDelay = (ht2, ht3, ht4, ht5, ht6, sectionName) => {    
-    //     const fnlhts = ht2 + ht3 + ht4 + ht5 + ht6 - 52 ;
-    //     if( window.scrollY >= fnlhts ){ 
-    //     document.querySelector(`#${sectionName} h2`).style.opacity = '1';      
-    //     document.querySelector(`#${sectionName} h2`).style.animationName = `sectionHead` ;
-    //     }
-    // }
+    const handelHeadDelay = (ht2, ht3, ht4, ht5, ht6, sectionName) => {    
+        const fnlhts = ht2 + ht3 + ht4 + ht5 + ht6 - 52 ;
+        if( window.scrollY >= fnlhts ){ 
+        document.querySelector(`#${sectionName} h2`).style.opacity = '1';      
+        document.querySelector(`#${sectionName} h2`).style.animationName = `sectionHead` ;
+        }
+    }
 
-    // if( window.location.href.slice( window.location.href.lastIndexOf('/')+1 ) === 'projects' ){
-    //     document.removeEventListener('scroll', ()=>{});
-    // }else{
-        // document.addEventListener('scroll', () => {
-        //     const ht2 = document.querySelector('#hero').offsetHeight ,
-        //     ht3 = document.querySelector('#skills').offsetHeight,
-        //     ht4 = document.querySelector('#projects').offsetHeight,
-        //     ht5 = document.querySelector('#certificates').offsetHeight,
-        //     ht6 = document.querySelector('#pens').offsetHeight;
+    if( window.location.href.slice( window.location.href.lastIndexOf('/')+1 ) === 'projects' ){
+        document.removeEventListener('scroll', ()=>{});
+    }else{
+        document.addEventListener('scroll', () => {
+            const ht2 = document.querySelector('#hero').offsetHeight ,
+            ht3 = document.querySelector('#skills').offsetHeight,
+            ht4 = document.querySelector('#projects').offsetHeight,
+            ht5 = document.querySelector('#certificates').offsetHeight,
+            ht6 = document.querySelector('#pens').offsetHeight;
 
-        //     handelHeadDelay(ht2,0,0,0,0, 'skills');
-        //     handelHeadDelay(ht2,ht3,0,0,0, 'projects');
-        //     handelHeadDelay(ht2,ht3,ht4,0,0, 'certificates');
-        //     handelHeadDelay(ht2,ht3,ht4,ht5,0, 'pens');
-        //     handelHeadDelay(ht2,ht3,ht4,ht5,ht6, 'feedback');
-        // });
-    // }
+            handelHeadDelay(ht2,0,0,0,0, 'skills');
+            handelHeadDelay(ht2,ht3,0,0,0, 'projects');
+            handelHeadDelay(ht2,ht3,ht4,0,0, 'certificates');
+            handelHeadDelay(ht2,ht3,ht4,ht5,0, 'pens');
+            handelHeadDelay(ht2,ht3,ht4,ht5,ht6, 'feedback');
+        });
+    }
 
 
     return (
@@ -176,6 +178,18 @@ function App() {
   
         <section id="projects">
         <h2> Projects / </h2>          
+          <AiOutlineSetting className={'projects__filter'}  onClick={filterFun}/>    
+          <div className={'projects__filtersWrapper'}>    
+            {
+              projectsLabel.map( (projLabel, index) => {
+                return(
+                  <Form.Group controlId={`formBasicCheckbox${index+1}`} key={index}>
+                    <Form.Check type="checkbox" label={projLabel} onClick={ handelProjectsFilter }/>
+                  </Form.Group>
+                );
+              })
+            }
+          </div>
           <div className={'projects__wrapper'}> 
             {
                 latestPojs.map( (prj, i) => { return(
