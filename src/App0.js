@@ -4,17 +4,18 @@ import Landing from './Components/Landing';
 import Projects from './Components/Projects';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
-function App() {    
+function App0() {    
   return (
-    <Router basename="/">
+    // <Router basename="#">
       <div className={'App'}>
-        <Switch>
+        <Landing />
+        {/* <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/Projects" component={Projects} />                
-        </Switch>
+        </Switch> */}
       </div>
-    </Router>
+    /* </Router> */
   );
 }
 
-export default App;
+export default App0;

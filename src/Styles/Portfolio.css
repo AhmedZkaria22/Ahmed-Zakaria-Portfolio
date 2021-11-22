@@ -2,6 +2,10 @@ body *:not(img, i) {
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --backwallperColor: #f6f7f9;
   --backmenuColor: #333;

@@ -87,3 +87,24 @@ export  const colorMoodFun = (e) => {
         document.documentElement.style.setProperty("--footerPolygon", "polygon(0% 0%, 0% 100%, 100% 100%)");
     }
 }
+
+/*document.addEventListener('scroll', () => {
+  let projEl = document.getElementById("projects");
+  let certEl = document.getElementById("certificates");
+  let trg = document.querySelector(".projects__filter");
+  let trg2 = document.querySelector(".projects__filtersWrapper");
+  if( window.scrollY <= projEl.offsetTop ){ 
+    trg.style.top = '0.1%';    trg.style.bottom = 'auto';
+    trg2.style.top = 'calc(0.1% + 20px)';   trg2.style.bottom = 'auto'; 
+  }else if( window.scrollY > projEl.offsetTop && window.scrollY < (certEl.offsetTop - (1.5 * trg2.offsetHeight)) ){
+    const topVal = `calc(${window.scrollY - projEl.offsetTop}px + 15vh)`; 
+    const topVal2 = `calc(${window.scrollY - projEl.offsetTop}px + 19vh)`; 
+    trg.style.top = topVal;      trg.style.bottom = 'auto';
+    trg2.style.top = topVal2;    trg2.style.bottom = 'auto';
+  }else{
+    trg.style.top = 'auto'; 
+    trg.style.bottom = '0.1%'; 
+    trg2.style.top = 'auto'; 
+    trg2.style.bottom = 'calc(0.1% + 20px)'; 
+  }
+});*/

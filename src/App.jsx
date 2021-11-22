@@ -1,31 +1,33 @@
 import Aos from 'aos';
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button, Carousel, Form } from 'react-bootstrap';
-import 'aos/dist/aos.css'
-import IHtml from '../Assets/images/certificates/CHtml.jpg';
-import ICss from '../Assets/images/certificates/CCss.jpg';
-import IResponsive from '../Assets/images/certificates/CResponsive.jpg';
-import IJs from '../Assets/images/certificates/CJavaScript.jpg';
-import IJquery from '../Assets/images/certificates/CJquery.jpg';
-import IReact from '../Assets/images/certificates/CReact.jpg';
-import ISql from '../Assets/images/certificates/CSql.jpg';
-import IJava from '../Assets/images/certificates/CJava.jpg';
-import IFiti from '../Assets/images/certificates/CFiti.jpg';
-import IWordpress from '../Assets/images/certificates/CWordpress.jpg';
+import 'aos/dist/aos.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Styles/Portfolio.css';
+import IHtml from './Assets/images/certificates/CHtml.jpg';
+import ICss from './Assets/images/certificates/CCss.jpg';
+import IResponsive from './Assets/images/certificates/CResponsive.jpg';
+import IJs from './Assets/images/certificates/CJavaScript.jpg';
+import IJquery from './Assets/images/certificates/CJquery.jpg';
+import IReact from './Assets/images/certificates/CReact.jpg';
+import ISql from './Assets/images/certificates/CSql.jpg';
+import IJava from './Assets/images/certificates/CJava.jpg';
+import IFiti from './Assets/images/certificates/CFiti.jpg';
+import IWordpress from './Assets/images/certificates/CWordpress.jpg';
 
-import Ahmed from '../Assets/images/Ahmed.png';
-import pen1 from '../Assets/images/codepen1.png';
-import pen2 from '../Assets/images/codepen2.png';
-import pen3 from '../Assets/images/codepen3.png';
-import pen4 from '../Assets/images/codepen4.png';
+import Ahmed from './Assets/images/Ahmed.png';
+import pen1 from './Assets/images/codepen1.png';
+import pen2 from './Assets/images/codepen2.png';
+import pen3 from './Assets/images/codepen3.png';
+import pen4 from './Assets/images/codepen4.png';
 
 
-import { projectsData } from './ProjectsData';
-import { menuFun, filterFun, colorMoodFun, handelProjectsFilter } from '../Plugin';
-import Skill from './Skill';
-import Project from './Project';
-import Pen from './Pen';
-import WriteTestimonial from './WriteTestimonial';
+import { projectsData } from './Components/ProjectsData';
+import { menuFun, filterFun, colorMoodFun, handelProjectsFilter } from './Plugin';
+import Skill from './Components/Skill';
+import Project from './Components/Project';
+import Pen from './Components/Pen';
+import WriteTestimonial from './Components/WriteTestimonial';
 
 import {FaTrafficLight, FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterest, FaGithub, FaCodepen} from 'react-icons/fa';
 import {BsSearch} from 'react-icons/bs';
@@ -35,12 +37,12 @@ import {GoBold} from 'react-icons/go';
 import {GiFamilyTree} from 'react-icons/gi';
 import {VscJson} from 'react-icons/vsc';
 import {DiGit} from 'react-icons/di';
-import cvFile from '../Assets/AhmedZakariaCV.pdf';
+import cvFile from './Assets/AhmedZakariaCV.pdf';
 import {HiDownload} from 'react-icons/hi';
 // import { Link } from 'react-router-dom';
 
 
-function Landing() {
+function App() {
     useEffect(() => {
         Aos.init({});
       }, []);
@@ -48,33 +50,33 @@ function Landing() {
     // const latestPojs = projectsData.filter( (item, i) => i >= (projectsData.length - 6) );
     const latestPojs = projectsData;
 
-    const [wd, setWd] = useState(document.body.clientWidth);
-    window.addEventListener('resize', ()=>{ setWd(document.body.clientWidth); });
+    // const [wd, setWd] = useState(document.body.clientWidth);
+    // window.addEventListener('resize', ()=>{ setWd(document.body.clientWidth); });
 
-    const handelHeadDelay = (ht2, ht3, ht4, ht5, ht6, sectionName) => {    
-        const fnlhts = ht2 + ht3 + ht4 + ht5 + ht6 - 52 ;
-        if( window.scrollY >= fnlhts ){ 
-        document.querySelector(`#${sectionName} h2`).style.opacity = '1';      
-        document.querySelector(`#${sectionName} h2`).style.animationName = `sectionHead` ;
-        }
-    }
+    // const handelHeadDelay = (ht2, ht3, ht4, ht5, ht6, sectionName) => {    
+    //     const fnlhts = ht2 + ht3 + ht4 + ht5 + ht6 - 52 ;
+    //     if( window.scrollY >= fnlhts ){ 
+    //     document.querySelector(`#${sectionName} h2`).style.opacity = '1';      
+    //     document.querySelector(`#${sectionName} h2`).style.animationName = `sectionHead` ;
+    //     }
+    // }
 
     // if( window.location.href.slice( window.location.href.lastIndexOf('/')+1 ) === 'projects' ){
     //     document.removeEventListener('scroll', ()=>{});
     // }else{
-        document.addEventListener('scroll', () => {
-            const ht2 = document.querySelector('#hero').offsetHeight ,
-            ht3 = document.querySelector('#skills').offsetHeight,
-            ht4 = document.querySelector('#projects').offsetHeight,
-            ht5 = document.querySelector('#certificates').offsetHeight,
-            ht6 = document.querySelector('#pens').offsetHeight;
+        // document.addEventListener('scroll', () => {
+        //     const ht2 = document.querySelector('#hero').offsetHeight ,
+        //     ht3 = document.querySelector('#skills').offsetHeight,
+        //     ht4 = document.querySelector('#projects').offsetHeight,
+        //     ht5 = document.querySelector('#certificates').offsetHeight,
+        //     ht6 = document.querySelector('#pens').offsetHeight;
 
-            handelHeadDelay(ht2,0,0,0,0, 'skills');
-            handelHeadDelay(ht2,ht3,0,0,0, 'projects');
-            handelHeadDelay(ht2,ht3,ht4,0,0, 'certificates');
-            handelHeadDelay(ht2,ht3,ht4,ht5,0, 'pens');
-            handelHeadDelay(ht2,ht3,ht4,ht5,ht6, 'feedback');
-        });
+        //     handelHeadDelay(ht2,0,0,0,0, 'skills');
+        //     handelHeadDelay(ht2,ht3,0,0,0, 'projects');
+        //     handelHeadDelay(ht2,ht3,ht4,0,0, 'certificates');
+        //     handelHeadDelay(ht2,ht3,ht4,ht5,0, 'pens');
+        //     handelHeadDelay(ht2,ht3,ht4,ht5,ht6, 'feedback');
+        // });
     // }
 
 
@@ -91,11 +93,11 @@ function Landing() {
           </div>
   
           <div className={'header__menu'}>
-            <a href="/#hero"> About </a>
-            <a href="/#skills"> Skills </a>
-            <a href="/#projects"> Projects </a>
-            <a href="/#certificates"> Certificates </a>
-            <a href="/#pens"> Pens </a>
+            <a href="#hero"> About </a>
+            <a href="#skills"> Skills </a>
+            <a href="#projects"> Projects </a>
+            <a href="#certificates"> Certificates </a>
+            <a href="#pens"> Pens </a>
           </div>
         </header>
   
@@ -239,4 +241,4 @@ function Landing() {
     );
   }
 
-export default Landing
+export default App
