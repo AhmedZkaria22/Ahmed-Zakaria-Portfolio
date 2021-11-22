@@ -75,7 +75,7 @@ h2{
     text-align: center;
     width: fit-content;
     max-width: fit-content;
-    margin: 0rem auto 1rem;        
+    margin: 0rem auto 1.5rem;        
     text-transform: uppercase;
     padding-inline: 1.8rem;
     border-radius: 0.5rem;
@@ -295,8 +295,8 @@ header{
 #skills{    margin-inline: 5%;
     h2{        
         &:not(:first-of-type){
-            margin: 0.5rem auto 0rem;
-            font-size: 1.7rem;
+            margin: 0.6rem auto 0rem;
+            font-size: 1.5rem;
             background-color: transparent;
             color: var(--highlightColor);
             &::after , &::before{ display: none; }
@@ -409,7 +409,6 @@ header{
         }
     }
 
-
     .projects__wrapper{
         width: 100%;
         display: grid;
@@ -437,7 +436,7 @@ header{
                 width: 100%;
                 height: 85%;
                 overflow: hidden;      
-                border: 0.4rem solid var(--projectBrdColor);
+                border: 0.25rem solid var(--projectBrdColor);
                 border-radius: 0.5rem;
                 border-bottom-right-radius: 1.5rem;
                 margin-bottom: 1.0rem;
@@ -500,6 +499,84 @@ header{
                     cursor: pointer;
                 }
                 a{ margin: 0; padding: 0; }
+            }
+        }
+    }
+
+    &>a{
+        padding: 0.5rem 3rem;
+        width: fit-content;
+        display: block;
+        margin-inline: auto;
+        // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        color: var(--textColor);
+        text-decoration: none;
+        text-transform: capitalize;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        background-color: var(--textColor);
+        color: var(--lightColor);
+        border: 0.25rem solid var(--lightColor);
+        letter-spacing: 0.1rem;
+        span{ font-weight: 500; }
+    }
+}
+
+.menuItemActive{
+    color: var(--highlightColor)!important;
+    &::after{ background-color: var(--textColor)!important; }
+}
+
+.projects-page{
+    margin-top: 3rem!important;
+    margin-bottom: 0rem!important;
+    padding: 3rem 0rem!important;
+    h2{
+        width: 100%!important;
+        max-width: 100%!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--highlightColor)!important;
+        background-color: transparent!important;
+        &::after , &::before{ display: none!important; }
+        margin-bottom: 3rem!important;
+        a{
+            position: absolute;
+            top: 0;
+            left: 3rem;
+            font: inherit;
+            color: var(--textColor);
+            // font-size: 0.5em;
+            svg{ font: inherit; }
+        }
+    }
+    .projects_menu{
+        width: 100%;
+        margin: 0rem 2% 1.5rem;
+        display: flex;
+        align-items: center;       
+        flex-wrap: wrap; 
+        button{
+            border: none;
+            background-color: transparent;
+            color: var(--textColor);
+            margin-right: 1.8rem;
+            margin-bottom: 1.0rem;
+            // &:first-of-type{ @extend .menuItemActive; }
+            position: relative;
+            padding: 0rem!important;
+            font-size: calc(0.8rem + 0.4vw);
+            font-weight: 500;
+            transition: all 0.2s linear 0s;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 0.15rem;
+                background-color: var(--highlightColor);
             }
         }
     }

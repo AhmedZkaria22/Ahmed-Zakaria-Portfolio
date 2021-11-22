@@ -140,7 +140,7 @@ h2 {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  margin: 0rem auto 1rem;
+  margin: 0rem auto 1.5rem;
   text-transform: uppercase;
   padding-inline: 1.8rem;
   border-radius: 0.5rem;
@@ -402,8 +402,8 @@ header .header__menu a {
   margin-inline: 5%;
 }
 #skills h2:not(:first-of-type) {
-  margin: 0.5rem auto 0rem;
-  font-size: 1.7rem;
+  margin: 0.6rem auto 0rem;
+  font-size: 1.5rem;
   background-color: transparent;
   color: var(--highlightColor);
 }
@@ -594,7 +594,7 @@ header .header__menu a {
   width: 100%;
   height: 85%;
   overflow: hidden;
-  border: 0.4rem solid var(--projectBrdColor);
+  border: 0.25rem solid var(--projectBrdColor);
   border-radius: 0.5rem;
   border-bottom-right-radius: 1.5rem;
   margin-bottom: 1rem;
@@ -670,6 +670,102 @@ header .header__menu a {
 #projects .projects__wrapper .projects__wrapper__item .projects__wrapper__item__controlls a {
   margin: 0;
   padding: 0;
+}
+#projects > a {
+  padding: 0.5rem 3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
+  margin-inline: auto;
+  color: var(--textColor);
+  text-decoration: none;
+  text-transform: capitalize;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  background-color: var(--textColor);
+  color: var(--lightColor);
+  border: 0.25rem solid var(--lightColor);
+  letter-spacing: 0.1rem;
+}
+#projects > a span {
+  font-weight: 500;
+}
+
+.menuItemActive {
+  color: var(--highlightColor) !important;
+}
+.menuItemActive::after {
+  background-color: var(--textColor) !important;
+}
+
+.projects-page {
+  margin-top: 3rem !important;
+  margin-bottom: 0rem !important;
+  padding: 3rem 0rem !important;
+}
+.projects-page h2 {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--highlightColor) !important;
+  background-color: transparent !important;
+  margin-bottom: 3rem !important;
+}
+.projects-page h2::after, .projects-page h2::before {
+  display: none !important;
+}
+.projects-page h2 a {
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  font: inherit;
+  color: var(--textColor);
+}
+.projects-page h2 a svg {
+  font: inherit;
+}
+.projects-page .projects_menu {
+  width: 100%;
+  margin: 0rem 2% 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.projects-page .projects_menu button {
+  border: none;
+  background-color: transparent;
+  color: var(--textColor);
+  margin-right: 1.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding: 0rem !important;
+  font-size: calc(0.8rem + 0.4vw);
+  font-weight: 500;
+  -webkit-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+.projects-page .projects_menu button::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  background-color: var(--highlightColor);
 }
 
 #certificates .certificates__carousel .carousel-indicators {
